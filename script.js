@@ -1,11 +1,11 @@
 /* =========================================
    SYNAPSE '26
    LOADING SCREEN
+   SHOW ONLY ON FIRST VISIT
+   OF CURRENT BROWSER SESSION
 ========================================= */
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
 
     const loader = document.getElementById("loader");
 
@@ -16,79 +16,127 @@ document.addEventListener("DOMContentLoaded", () => {
     const statusText = document.getElementById("statusText");
 
 
+    /* -----------------------------------------
+       SAFETY CHECK
+    ----------------------------------------- */
+
+    if (!loader) {
+        return;
+    }
+
+
+    /* -----------------------------------------
+       CHECK IF INTRO ALREADY PLAYED
+       DURING THIS SESSION
+    ----------------------------------------- */
+
+    const introPlayed =
+        sessionStorage.getItem("synapseIntroPlayed");
+
+
+    if (introPlayed === "true") {
+
+        /* Skip intro completely */
+
+        loader.remove();
+
+        document.body.style.overflow = "auto";
+
+        return;
+
+    }
+
+
+    /* -----------------------------------------
+       MARK INTRO AS PLAYED
+       IMMEDIATELY
+    ----------------------------------------- */
+
+    sessionStorage.setItem(
+        "synapseIntroPlayed",
+        "true"
+    );
+
+
+    /* -----------------------------------------
+       START INTRO
+    ----------------------------------------- */
+
     let progress = 0;
-
-
-    /*
-        Loading duration:
-        3 seconds = 3000 milliseconds
-    */
 
     const duration = 3000;
 
     const intervalTime = 30;
 
-    const increment = 100 / (duration / intervalTime);
+    const increment =
+        100 / (duration / intervalTime);
 
 
-    const loadingInterval = setInterval(() => {
+    const loadingInterval =
+        setInterval(() => {
+
+            progress += increment;
 
 
-        progress += increment;
+            if (progress >= 100) {
+
+                progress = 100;
+
+                clearInterval(
+                    loadingInterval
+                );
 
 
-        if (progress >= 100) {
+                percentage.textContent =
+                    "100";
 
-            progress = 100;
+                progressBar.style.width =
+                    "100%";
 
-            clearInterval(loadingInterval);
-
-            percentage.textContent = "100";
-
-            progressBar.style.width = "100%";
-
-            statusText.textContent = "INITIALISED";
+                statusText.textContent =
+                    "INITIALISED";
 
 
-            /*
-                Keep 100% visible briefly
-                before moving to homepage.
-            */
-
-            setTimeout(() => {
-
-                loader.style.opacity = "0";
-
-                loader.style.transition =
-                    "opacity 0.8s ease";
-
+                /* --------------------------------
+                   FADE OUT
+                -------------------------------- */
 
                 setTimeout(() => {
 
-                    loader.remove();
+                    loader.style.opacity =
+                        "0";
 
-                    document.body.style.overflow =
-                        "auto";
-
-                }, 800);
-
-
-            }, 200);
+                    loader.style.transition =
+                        "opacity 0.8s ease";
 
 
-            return;
+                    setTimeout(() => {
 
-        }
+                        loader.remove();
 
+                        document.body.style.overflow =
+                            "auto";
 
-        percentage.textContent =
-            Math.floor(progress);
-
-        progressBar.style.width =
-            progress + "%";
+                    }, 800);
 
 
-    }, intervalTime);
+                }, 200);
+
+
+                return;
+
+            }
+
+
+            percentage.textContent =
+                Math.floor(progress);
+
+
+            progressBar.style.width =
+                progress + "%";
+
+
+        }, intervalTime);
 
 });
 /* =========================================
@@ -469,9 +517,14 @@ document.addEventListener("DOMContentLoaded", () => {
        NEW SYNAPSE '26 IMAGES — 01 to 18
     ========================================= */
 
+    "https://i.ibb.co/wNBVRLbN/Whats-App-Image-2026-08-29-at-19-07-34-1.jpg",
+	"https://i.ibb.co/svXJs3pr/Whats-App-Image-2026-08-29-at-19-07-19-1.jpg",
+    "https://i.ibb.co/vxyTcvmn/Whats-App-Image-2026-08-29-at-19-07-29.jpg",
+    "https://i.ibb.co/mV2mpKh8/Whats-App-Image-2026-08-29-at-19-07-39.jpg",
+    "https://i.ibb.co/Y7g3W12w/Whats-App-Image-2026-08-29-at-19-07-40.jpg",
+    "https://i.ibb.co/XZ2kpt7k/Whats-App-Image-2026-08-29-at-19-07-35-1.jpg",
     "https://i.ibb.co/7tHJMRf0/Whats-App-Image-2026-08-29-at-19-07-36.jpg",
     "https://i.ibb.co/tMKH5jkN/Whats-App-Image-2026-08-29-at-19-07-35.jpg",
-    "https://i.ibb.co/wNBVRLbN/Whats-App-Image-2026-08-29-at-19-07-34-1.jpg",
     "https://i.ibb.co/GGGX1qv/Whats-App-Image-2026-08-29-at-19-07-26-2.jpg",
     "https://i.ibb.co/wNJc3h4r/Whats-App-Image-2026-08-29-at-19-07-26-1.jpg",
     "https://i.ibb.co/Cp2xwrs5/Whats-App-Image-2026-08-29-at-19-07-26.jpg",
@@ -535,6 +588,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentMemory =
         document.getElementById("currentMemory");
 
+    const totalMemories =
+        document.getElementById("totalMemories");
     const lightbox =
         document.getElementById("memoryLightbox");
 
@@ -555,6 +610,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     let activeMemory = 0;
+	
+	if (totalMemories) {
+    totalMemories.textContent = memories.length;
+}
+	
+	
+	
 
 
     /* =====================================
@@ -575,28 +637,30 @@ document.addEventListener("DOMContentLoaded", () => {
             rhythm throughout the gallery.
         */
 
-        if (
-            number === 1 ||
-            number === 9 ||
-            number === 15 ||
-            number === 23
-        ) {
+        /* =====================================
+   REPEATING ASYMMETRIC LAYOUT
+   Works for ANY number of images
+===================================== */
 
-            card.classList.add("large");
+const position = (number - 1) % 12;
 
-        }
+if (
+    position === 0 ||
+    position === 7
+) {
 
-        if (
-            number === 5 ||
-            number === 12 ||
-            number === 19 ||
-            number === 26 ||
-            number === 31
-        ) {
+    card.classList.add("large");
 
-            card.classList.add("wide");
+}
 
-        }
+if (
+    position === 4 ||
+    position === 10
+) {
+
+    card.classList.add("wide");
+
+}
 
 
         card.dataset.index = number;
