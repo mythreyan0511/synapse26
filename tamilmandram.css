@@ -1,0 +1,2379 @@
+/* =========================================
+   ROWTHIRAM '26
+   TAMIL MANDRAM
+   CHOZHA THEME
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #080706;
+
+    color: #e8e0cf;
+
+    font-family:
+        "Noto Sans Tamil",
+        "Latha",
+        "Nirmala UI",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --black: #080706;
+
+    --deep-black: #050403;
+
+    --stone: #15120f;
+
+    --stone-light: #211b15;
+
+    --bronze: #9a6a32;
+
+    --gold: #c49a52;
+
+    --gold-light: #d8b873;
+
+    --ivory: #e8e0cf;
+
+    --muted: #9a9182;
+
+    --dark-muted: #5e574d;
+
+    --maroon: #4a1518;
+
+    --line:
+        rgba(196,154,82,0.22);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.tm-nav {
+
+    width: 100%;
+
+    height: 88px;
+
+    border-bottom:
+        1px solid
+        rgba(196,154,82,0.18);
+
+    background:
+        rgba(8,7,6,0.97);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+.tm-nav-inner {
+
+    width:
+        min(1400px, 90%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.tm-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--ivory);
+
+    text-decoration: none;
+}
+
+
+.tm-mark {
+
+    width: 25px;
+
+    height: 25px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    transform: rotate(45deg);
+
+    position: relative;
+}
+
+
+.tm-mark::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border:
+        1px solid
+        var(--bronze);
+}
+
+
+.tm-mark span {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 4px;
+
+    background:
+        var(--gold);
+
+    top: 9px;
+
+    left: 9px;
+}
+
+
+.tm-brand-text {
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.13em;
+}
+
+
+.tm-brand-text span {
+
+    color:
+        var(--dark-muted);
+
+    font-weight: 400;
+}
+
+
+/* NAV TITLE */
+
+.tm-nav-title {
+
+    color:
+        var(--dark-muted);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.35em;
+}
+
+
+/* BACK */
+
+.tm-back {
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid
+        rgba(196,154,82,0.25);
+
+    color:
+        var(--muted);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    transition:
+        0.3s ease;
+}
+
+
+.tm-back:hover {
+
+    color:
+        var(--gold-light);
+
+    border-color:
+        var(--gold);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.tm-hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.tm-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center 42%,
+            rgba(196,154,82,0.12),
+            transparent 38%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(74,21,24,0.22),
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+
+/* TEMPLE GRID */
+
+.tm-hero-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.35;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(196,154,82,0.06) 50%,
+            transparent 51%
+        ),
+
+        linear-gradient(
+            0deg,
+            transparent 49%,
+            rgba(196,154,82,0.06) 50%,
+            transparent 51%
+        );
+
+    background-size:
+        110px 110px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black,
+            transparent 75%
+        );
+}
+
+
+.tm-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 1200px;
+}
+
+
+/* EYEBROW */
+
+.tm-eyebrow {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color:
+        var(--gold);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4em;
+
+    margin-bottom: 30px;
+}
+
+
+.tm-eyebrow span {
+
+    width: 60px;
+
+    height: 1px;
+
+    background:
+        var(--bronze);
+}
+
+
+/* PRESENT */
+
+.tm-present {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 0.18em;
+
+    margin-bottom: 15px;
+}
+
+
+/* TITLE */
+
+.tm-hero h1 {
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        clamp(
+            80px,
+            14vw,
+            190px
+        );
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    color:
+        var(--ivory);
+
+    letter-spacing:
+        -0.06em;
+
+    text-shadow:
+        0 0 50px
+        rgba(196,154,82,0.12);
+}
+
+
+.tm-hero h1 span {
+
+    color:
+        var(--gold);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.35em;
+
+    vertical-align:
+        middle;
+
+    letter-spacing:
+        -0.02em;
+}
+
+
+/* HERO LINE */
+
+.tm-hero-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+
+.tm-hero-line span {
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        var(--bronze);
+}
+
+
+.tm-hero-line p {
+
+    color:
+        var(--gold-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        0.3em;
+}
+
+
+/* DESCRIPTION */
+
+.tm-hero-description {
+
+    max-width: 600px;
+
+    margin:
+        30px auto 0;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.tm-section {
+
+    width:
+        min(1300px, 90%);
+
+    margin:
+        auto;
+
+    padding:
+        110px 0;
+}
+
+
+/* SECTION HEADING */
+
+.tm-section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+
+.tm-section-heading > span {
+
+    color:
+        var(--bronze);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    padding-top: 6px;
+}
+
+
+.tm-section-heading small {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--dark-muted);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        0.35em;
+}
+
+
+.tm-section-heading h2 {
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            60px
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.tm-section-heading.centered {
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.tm-section-heading.centered > span {
+
+    display:
+        none;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.tm-intro {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.tm-intro-content {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.4fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+.tm-quote {
+
+    position: relative;
+
+    min-height: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--line);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(196,154,82,0.05),
+            transparent
+        );
+}
+
+
+.tm-quote::before,
+.tm-quote::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-color:
+        var(--gold);
+
+    border-style: solid;
+}
+
+
+.tm-quote::before {
+
+    top: 15px;
+
+    left: 15px;
+
+    border-width:
+        1px 0 0 1px;
+}
+
+
+.tm-quote::after {
+
+    right: 15px;
+
+    bottom: 15px;
+
+    border-width:
+        0 1px 1px 0;
+}
+
+
+.quote-mark {
+
+    position: absolute;
+
+    color:
+        rgba(196,154,82,0.3);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 80px;
+
+    top: 20px;
+
+    left: 35px;
+}
+
+
+.quote-bottom {
+
+    top: auto;
+
+    left: auto;
+
+    right: 35px;
+
+    bottom: -10px;
+}
+
+
+.tm-quote p {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size: 28px;
+
+    text-align:
+        center;
+}
+
+
+.tm-intro-text p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 2.1;
+
+    margin-bottom: 22px;
+}
+
+
+.tm-intro-text strong {
+
+    color:
+        var(--gold-light);
+}
+
+
+/* =========================================
+   COMPETITIONS
+========================================= */
+
+.competitions {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.competition-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.competition-card {
+
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 32px;
+
+    background:
+        #100e0b;
+
+    border:
+        1px solid
+        rgba(196,154,82,0.16);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.competition-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -90px;
+
+    top: -90px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(196,154,82,0.12);
+}
+
+
+.competition-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(196,154,82,0.5);
+
+    background:
+        #15120f;
+}
+
+
+.card-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+}
+
+
+.card-number {
+
+    color:
+        var(--dark-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.2em;
+}
+
+
+.card-tamil {
+
+    color:
+        var(--bronze);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.2em;
+}
+
+
+.card-symbol {
+
+    width: 68px;
+
+    height: 68px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        40px 0 25px;
+
+    border:
+        1px solid
+        var(--bronze);
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        25px;
+
+    transform:
+        rotate(45deg);
+}
+
+
+.card-symbol::first-letter {
+
+    transform:
+        rotate(-45deg);
+}
+
+
+.competition-card h3 {
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        34px;
+
+    font-weight:
+        500;
+}
+
+
+.card-subtitle {
+
+    margin-top:
+        7px;
+
+    margin-bottom:
+        25px;
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.15em;
+}
+
+
+.competition-card ul {
+
+    list-style:
+        none;
+}
+
+
+.competition-card li {
+
+    position:
+        relative;
+
+    padding-left:
+        18px;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+.competition-card li::before {
+
+    content:
+        "◆";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    color:
+        var(--bronze);
+
+    font-size:
+        6px;
+}
+
+
+.card-closing {
+
+    margin-top:
+        35px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(196,154,82,0.12);
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================
+   SPECIAL EVENTS
+========================================= */
+
+.special {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.special-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        20px;
+}
+
+
+.special-card {
+
+    padding:
+        40px 35px;
+
+    min-height:
+        320px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #15110d,
+            #0b0907
+        );
+
+    border:
+        1px solid
+        rgba(196,154,82,0.14);
+
+    position:
+        relative;
+}
+
+
+.special-number {
+
+    position:
+        absolute;
+
+    top:
+        20px;
+
+    right:
+        25px;
+
+    color:
+        #3b3328;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.2em;
+}
+
+
+.special-icon {
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--bronze);
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        21px;
+
+    margin-bottom:
+        30px;
+}
+
+
+.special-card h3 {
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        500;
+
+    margin-bottom:
+        18px;
+}
+
+
+.special-card p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.9;
+
+    margin-bottom:
+        10px;
+}
+
+
+/* =========================================
+   PROGRAMME
+========================================= */
+
+.programme {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.programme-header {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 45px;
+
+    padding:
+        30px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        40px;
+
+    border:
+        1px solid
+        var(--line);
+
+    text-align:
+        center;
+}
+
+
+.programme-header div {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+}
+
+
+.programme-header strong {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        28px;
+
+    font-weight:
+        500;
+}
+
+
+.programme-header span {
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.16em;
+}
+
+
+.programme-divider {
+
+    width:
+        1px;
+
+    height:
+        55px;
+
+    background:
+        var(--bronze);
+}
+
+
+.programme-list {
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+}
+
+
+.programme-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        260px 1fr;
+
+    gap:
+        30px;
+
+    padding:
+        20px 25px;
+
+    border-bottom:
+        1px solid
+        rgba(196,154,82,0.1);
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.programme-row:hover {
+
+    background:
+        rgba(196,154,82,0.04);
+}
+
+
+.programme-row time {
+
+    color:
+        var(--bronze);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0.05em;
+}
+
+
+.programme-row p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+.programme-row.featured {
+
+    border-left:
+        2px solid
+        var(--gold);
+
+    background:
+        rgba(196,154,82,0.04);
+}
+
+
+.programme-row.featured p {
+
+    color:
+        var(--gold-light);
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================
+   PHILOSOPHY
+========================================= */
+
+.philosophy {
+
+    min-height:
+        600px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.philosophy-content {
+
+    max-width:
+        900px;
+}
+
+
+.philosophy-content small {
+
+    color:
+        var(--bronze);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.35em;
+}
+
+
+.philosophy-content h2 {
+
+    margin:
+        30px 0;
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        clamp(
+            50px,
+            8vw,
+            100px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.95;
+}
+
+
+.philosophy-content h2 span {
+
+    color:
+        var(--gold);
+}
+
+
+.philosophy-content p {
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto 18px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    line-height:
+        2;
+}
+
+
+.philosophy-content strong {
+
+    color:
+        var(--gold-light);
+}
+
+
+.philosophy-ornament {
+
+    color:
+        var(--bronze);
+
+    font-size:
+        18px;
+
+    margin:
+        25px;
+}
+
+
+/* =========================================
+   ADVISORS
+========================================= */
+
+.advisors {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.advisor-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        20px;
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+}
+
+
+.tm-advisor {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    padding:
+        30px;
+
+    border:
+        1px solid
+        rgba(196,154,82,0.15);
+
+    background:
+        #100e0b;
+}
+
+
+.advisor-symbol {
+
+    flex:
+        0 0 65px;
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--bronze);
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        25px;
+}
+
+
+.advisor-info span {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--bronze);
+
+    font-size:
+        7px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.25em;
+}
+
+
+.advisor-info h3 {
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        18px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.4;
+}
+
+
+.advisor-info p {
+
+    margin-top:
+        8px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+}
+
+
+.advisor-info small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery {
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.gallery-placeholder {
+
+    min-height:
+        300px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(196,154,82,0.14);
+
+    background:
+        linear-gradient(
+            135deg,
+            #15110d,
+            #0a0806
+        );
+
+    text-align:
+        center;
+}
+
+
+.gallery-symbol {
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--bronze);
+
+    color:
+        var(--gold);
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        25px;
+}
+
+
+.gallery-placeholder p {
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        24px;
+}
+
+
+.gallery-placeholder span {
+
+    margin-top:
+        8px;
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.1em;
+}
+
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.tm-closing {
+
+    min-height:
+        550px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(196,154,82,0.08),
+            transparent 55%
+        );
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+
+.closing-ornament {
+
+    color:
+        var(--bronze);
+
+    font-size:
+        18px;
+
+    margin:
+        20px;
+}
+
+
+.tm-closing p {
+
+    color:
+        var(--muted);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        18px;
+
+    margin:
+        5px;
+}
+
+
+.tm-closing h2 {
+
+    margin-top:
+        35px;
+
+    color:
+        var(--ivory);
+
+    font-family:
+        Georgia,
+        "Noto Serif Tamil",
+        serif;
+
+    font-size:
+        clamp(
+            55px,
+            9vw,
+            110px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.9;
+}
+
+
+.tm-closing > span {
+
+    margin-top:
+        20px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.35em;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.tm-footer {
+
+    min-height:
+        100px;
+
+    padding:
+        25px 5%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    border-top:
+        1px solid
+        rgba(196,154,82,0.12);
+
+    background:
+        #050403;
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+.tm-footer div:first-child {
+
+    color:
+        var(--muted);
+
+    font-weight:
+        700;
+}
+
+
+.tm-footer a {
+
+    color:
+        var(--dark-muted);
+
+    text-decoration:
+        none;
+
+    transition:
+        0.3s ease;
+}
+
+
+.tm-footer a:hover {
+
+    color:
+        var(--gold-light);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .tm-intro-content {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+    }
+
+
+    .tm-quote {
+
+        max-width:
+            600px;
+
+        margin:
+            auto;
+
+        min-height:
+            220px;
+    }
+
+
+    .competition-grid,
+    .special-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            600px;
+
+        margin:
+            auto;
+    }
+
+
+    .advisor-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            650px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+
+    .tm-nav {
+
+        height:
+            72px;
+    }
+
+
+    .tm-nav-inner {
+
+        width:
+            90%;
+    }
+
+
+    .tm-nav-title {
+
+        display:
+            none;
+    }
+
+
+    .tm-brand-text {
+
+        font-size:
+            13px;
+    }
+
+
+    .tm-mark {
+
+        width:
+            20px;
+
+        height:
+            20px;
+    }
+
+
+    .tm-back {
+
+        padding:
+            9px 10px;
+
+        font-size:
+            6px;
+    }
+
+
+    /* HERO */
+
+    .tm-hero {
+
+        min-height:
+            570px;
+    }
+
+
+    .tm-eyebrow {
+
+        font-size:
+            6px;
+
+        letter-spacing:
+            0.2em;
+    }
+
+
+    .tm-eyebrow span {
+
+        width:
+            25px;
+    }
+
+
+    .tm-present {
+
+        font-size:
+            10px;
+    }
+
+
+    .tm-hero h1 {
+
+        font-size:
+            72px;
+    }
+
+
+    .tm-hero-line {
+
+        gap:
+            10px;
+    }
+
+
+    .tm-hero-line span {
+
+        width:
+            30px;
+    }
+
+
+    .tm-hero-line p {
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            0.18em;
+    }
+
+
+    .tm-hero-description {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.9;
+    }
+
+
+    /* SECTION */
+
+    .tm-section {
+
+        width:
+            90%;
+
+        padding:
+            75px 0;
+    }
+
+
+    .tm-section-heading {
+
+        gap:
+            15px;
+
+        margin-bottom:
+            35px;
+    }
+
+
+    .tm-section-heading h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .tm-section-heading small {
+
+        font-size:
+            6px;
+    }
+
+
+    /* INTRO */
+
+    .tm-intro-content {
+
+        gap:
+            30px;
+    }
+
+
+    .tm-quote {
+
+        min-height:
+            180px;
+    }
+
+
+    .tm-quote p {
+
+        font-size:
+            20px;
+    }
+
+
+    .tm-intro-text p {
+
+        font-size:
+            12px;
+
+        line-height:
+            2;
+    }
+
+
+    /* CARDS */
+
+    .competition-card {
+
+        min-height:
+            auto;
+
+        padding:
+            28px;
+    }
+
+
+    .special-card {
+
+        min-height:
+            auto;
+
+        padding:
+            30px;
+    }
+
+
+    /* PROGRAMME */
+
+    .programme-header {
+
+        flex-direction:
+            column;
+
+        gap:
+            20px;
+
+        padding:
+            25px;
+    }
+
+
+    .programme-divider {
+
+        width:
+            55px;
+
+        height:
+            1px;
+    }
+
+
+    .programme-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+        padding:
+            17px 12px;
+    }
+
+
+    .programme-row time {
+
+        font-size:
+            8px;
+    }
+
+
+    .programme-row p {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.7;
+    }
+
+
+    /* PHILOSOPHY */
+
+    .philosophy {
+
+        min-height:
+            500px;
+    }
+
+
+    .philosophy-content h2 {
+
+        font-size:
+            52px;
+    }
+
+
+    .philosophy-content p {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.9;
+    }
+
+
+    /* ADVISORS */
+
+    .tm-advisor {
+
+        padding:
+            22px;
+
+        gap:
+            18px;
+    }
+
+
+    .advisor-symbol {
+
+        flex-basis:
+            50px;
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+        font-size:
+            19px;
+    }
+
+
+    .advisor-info h3 {
+
+        font-size:
+            14px;
+    }
+
+
+    /* CLOSING */
+
+    .tm-closing {
+
+        min-height:
+            450px;
+    }
+
+
+    .tm-closing p {
+
+        font-size:
+            14px;
+    }
+
+
+    .tm-closing h2 {
+
+        font-size:
+            60px;
+    }
+
+
+    /* FOOTER */
+
+    .tm-footer {
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+
+        text-align:
+            center;
+
+        padding:
+            30px 5%;
+    }
+
+}

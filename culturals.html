@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Culturals | SYNAPSE '26</title>
+<link rel="stylesheet" href="culturals.css">
+</head>
+<body>
+
+<header class="synapse-navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="synapse-logo">SYNAPSE <span>'26</span></a>
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about-gvmc">ABOUT</a>
+            <a href="index.html#sponsors">SPONSORS</a>
+            <a href="index.html#events">EVENTS</a>
+            <a href="index.html#prize-pool">PRIZE POOL</a>
+            <a href="instructions.html">GENERAL INSTRUCTIONS</a>
+            <a href="advisors.html">ADVISORS</a>
+            <a href="council.html">ORGANISING COMMITTEE</a>
+            <a href="index.html#gallery">FORMER YEAR HIGHLIGHTS</a>
+            <a href="index.html#connect">CONTACT US</a>
+        </nav>
+        <a href="index.html" class="back-home">← BACK TO HOME</a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main class="cultural-main">
+
+<section class="cultural-hero">
+    <div class="hero-inner">
+        <div class="hero-eyebrow"><span></span>SYNAPSE '26 · CULTURALS</div>
+        <h1>CHOOSE YOUR <strong>STAGE.</strong></h1>
+        <p>Explore the cultural events of SYNAPSE '26 and find your moment to perform, compete and create.</p>
+    </div>
+</section>
+
+<section class="category-section">
+    <div class="category-grid">
+
+        <article class="category-card" onclick="showCategory('stage')">
+            <div class="category-image"><img src="YOUR_ORIGINAL_STAGE_IMAGE_URL" alt="Stage Events"></div>
+            <div class="category-overlay"></div>
+            <div class="category-number">01</div>
+            <div class="category-content">
+                <span>CATEGORY 01</span>
+                <h2>STAGE <strong>EVENTS</strong></h2>
+                <p>Competitive stage events designed for creativity, teamwork and performance.</p>
+                <button class="explore-button" type="button">EXPLORE <b>→</b></button>
+            </div>
+        </article>
+
+        <article class="category-card" onclick="showCategory('music')">
+            <div class="category-image"><img src="YOUR_ORIGINAL_MUSIC_IMAGE_URL" alt="Music Events"></div>
+            <div class="category-overlay"></div>
+            <div class="category-number">02</div>
+            <div class="category-content">
+                <span>CATEGORY 02</span>
+                <h2>MUSIC <strong>EVENTS</strong></h2>
+                <p>Find your rhythm through singing, instruments and live musical performances.</p>
+                <button class="explore-button" type="button">EXPLORE <b>→</b></button>
+            </div>
+        </article>
+
+        <article class="category-card" onclick="showCategory('dance')">
+            <div class="category-image"><img src="YOUR_ORIGINAL_DANCE_IMAGE_URL" alt="Dance Events"></div>
+            <div class="category-overlay"></div>
+            <div class="category-number">03</div>
+            <div class="category-content">
+                <span>CATEGORY 03</span>
+                <h2>DANCE <strong>EVENTS</strong></h2>
+                <p>Move, express and compete through dynamic dance events.</p>
+                <button class="explore-button" type="button">EXPLORE <b>→</b></button>
+            </div>
+        </article>
+
+        <article class="category-card" onclick="showCategory('online')">
+            <div class="category-image"><img src="https://i.ibb.co/FLYdTrwY/Online-events.png" alt="Online Events"></div>
+            <div class="category-overlay"></div>
+            <div class="category-number">04</div>
+            <div class="category-content">
+                <span>CATEGORY 04</span>
+                <h2>ONLINE <strong>EVENTS</strong></h2>
+                <p>Create and compete digitally through our online cultural events.</p>
+                <button class="explore-button" type="button">EXPLORE <b>→</b></button>
+            </div>
+        </article>
+
+    </div>
+
+    <section id="stagePage" class="event-page">
+        <div class="event-page-header">
+            <button class="back-button" type="button" onclick="backToCategories()">← BACK TO CATEGORIES</button>
+            <div><span>SYNAPSE '26 · STAGE EVENTS</span><h2>STAGE EVENTS</h2></div>
+        </div>
+        <div id="stageEvents" class="events-grid"></div>
+    </section>
+
+    <section id="musicPage" class="event-page">
+        <div class="event-page-header">
+            <button class="back-button" type="button" onclick="backToCategories()">← BACK TO CATEGORIES</button>
+            <div><span>SYNAPSE '26 · MUSIC EVENTS</span><h2>MUSIC EVENTS</h2></div>
+        </div>
+        <div id="musicEvents" class="events-grid"></div>
+    </section>
+
+    <section id="dancePage" class="event-page">
+        <div class="event-page-header">
+            <button class="back-button" type="button" onclick="backToCategories()">← BACK TO CATEGORIES</button>
+            <div><span>SYNAPSE '26 · DANCE EVENTS</span><h2>DANCE EVENTS</h2></div>
+        </div>
+        <div id="danceEvents" class="events-grid"></div>
+    </section>
+
+    <section id="onlinePage" class="event-page">
+        <div class="event-page-header">
+            <button class="back-button" type="button" onclick="backToCategories()">← BACK TO CATEGORIES</button>
+            <div><span>SYNAPSE '26 · ONLINE EVENTS</span><h2>ONLINE EVENTS</h2></div>
+        </div>
+        <div id="onlineEvents" class="events-grid"></div>
+    </section>
+
+    <section id="eventDetails" class="event-details">
+        <div class="details-layout">
+
+            <div class="details-image">
+                <img id="detailsImage" src="" alt="">
+            </div>
+
+            <div class="details-information">
+                <span id="detailsCategory" class="details-label"></span>
+                <h1 id="detailsTitle"></h1>
+                <div class="details-line"></div>
+
+                <h3>RULES &amp; REGULATIONS</h3>
+                <ol id="detailsRules" class="rules-list"></ol>
+
+                <div id="detailsFee" class="registration-fee"></div>
+
+                <div class="details-action-row">
+                    <a id="registerButton" class="register-button" href="#" target="_blank" rel="noopener noreferrer">
+                        REGISTER NOW <span>→</span>
+                    </a>
+
+                    <button class="back-to-categories" type="button" onclick="backToCategories()">
+                        ← BACK TO CATEGORIES
+                    </button>
+                </div>
+
+                <div class="details-contacts">
+                    <div class="details-section-label"><span></span>EVENT IN-CHARGES</div>
+                    <div id="detailsContacts" class="contacts-grid"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cultural-cta">
+        <div class="cta-inner">
+            <span>READY TO TAKE THE STAGE?</span>
+            <h2>YOUR <strong>MOMENT</strong> STARTS HERE.</h2>
+            <p>Choose your event and register for SYNAPSE '26.</p>
+            <a href="index.html#events" class="cta-button">BACK TO EVENTS <span>→</span></a>
+        </div>
+    </section>
+</section>
+</main>
+
+<footer class="synapse-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="footer-logo">SYNAPSE <span>'26</span></div>
+            <p>A NATIONAL-LEVEL INTERCOLLEGIATE SPORTS &amp; CULTURAL EXTRAVAGANZA</p>
+        </div>
+
+        <div class="footer-column">
+            <div class="footer-heading">EXPLORE</div>
+            <a href="index.html">HOME</a>
+            <a href="index.html#about-synapse">ABOUT SYNAPSE</a>
+            <a href="index.html#sponsors">SPONSORS</a>
+            <a href="index.html#events">EVENTS</a>
+            <a href="index.html#prize-pool">PRIZE POOL</a>
+        </div>
+
+        <div class="footer-column">
+            <div class="footer-heading">INFORMATION</div>
+            <a href="instructions.html">GENERAL INSTRUCTIONS</a>
+            <a href="advisors.html">ADVISORS</a>
+            <a href="council.html">ORGANISING COMMITTEE</a>
+            <a href="index.html#gallery">FORMER YEAR HIGHLIGHTS</a>
+            <a href="index.html#connect">CONTACT US</a>
+        </div>
+
+        <div class="footer-column footer-social">
+            <div class="footer-heading">FOLLOW SYNAPSE</div>
+            <a href="https://www.instagram.com/synapse__26/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+            <span>@synapse__26</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+const culturalEvents = {
+    stage: [
+        {
+            title: "Adzap",
+            image: "https://i.ibb.co/GvCtPjLC/Adzap.jpg",
+            fee: "₹100 / Head",
+            rules: [
+                "Maximum 2 teams per college.",
+                "5–10 participants per team.",
+                "No cross-college teams allowed.",
+                "Time limit: 10 minutes.",
+                "Preparation time: 15 minutes.",
+                "Products will be allotted by lots.",
+                "Supporting properties must be brought on their own.",
+                "Judging criteria: content, presentation, humour, spontaneity, adhering to topic and creativity.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Dumb C",
+            image: "https://i.ibb.co/d0G3PVfj/Dumb-c.png",
+            fee: "₹200 / Team",
+            rules: [
+                "Team event with a maximum of 3 members.",
+                "Round 1: 2 minutes with 6 Tamil movie dialogues.",
+                "Only Tamil movie dialogues for Round 1.",
+                "One bonus question; bonus question carries more points.",
+                "Round 2: 3 minutes with 6 items involving Tamil and English characters.",
+                "Top 6 will get into the final round.",
+                "Final round includes Tamil and English movies, Tamil and English characters and Tamil dialogue.",
+                "Final round duration: 4 minutes.",
+                "Top 3 will get the prize."
+            ],
+            contacts: []
+        },
+        {
+            title: "Connexions",
+            image: "https://i.ibb.co/PZ2TVz1D/Connections.png",
+            fee: "₹200 / Team",
+            rules: [
+                "Prelims: Question is displayed on the screen commonly.",
+                "Each team should write the answer on the given paper.",
+                "Points: 10.",
+                "Time: 5 seconds.",
+                "No negative marks.",
+                "Finals: A team of three.",
+                "A series of panels containing clues will be shown.",
+                "The team finding the answer first will be given the marks."
+            ],
+            contacts: []
+        },
+        {
+            title: "Movie Spoof",
+            image: "https://i.ibb.co/zh3PRdXx/Movie-spoof.png",
+            fee: "₹100 / Head",
+            rules: [
+                "One team per college.",
+                "Time limit: 8–10 minutes. Buzzer at 8 minutes and at 10 minutes.",
+                "5–10 participants per team.",
+                "Maximum registration: 12 teams, with priority based on registration order.",
+                "Topic: Movie of your choice.",
+                "Judging criteria: content and clarity, properties, costumes, AV, voice modulation, humour and audience response.",
+                "Audio recordings must be submitted 1 week prior to the in-charges. A pen drive with audio should also be brought on the day of the event.",
+                "Judge's decision will be final.",
+                "Crossing the time limit will lead to point deduction.",
+                "Vulgarity/plagiarism will not be entertained.",
+                "Participants must report on time; otherwise they will be disqualified."
+            ],
+            contacts: []
+        }
+    ],
+
+    music: [
+        {
+            title: "Solo Singing",
+            image: "https://i.ibb.co/tPNKWZCM/Solo-singing-men.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Multiple entries per college are allowed.",
+                "Songs of any genre/language are permitted.",
+                "Participants may use karaoke or bring their own instruments.",
+                "Karaoke must be submitted 2 days prior in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
+                "Singing on seeing lyrics is not allowed.",
+                "Time limit: 3 minutes.",
+                "Medleys and mashups are allowed.",
+                "Preliminary round will be conducted based on the number of entries; details will be shared after registration closes.",
+                "Judging criteria: vocal quality, rhythm, pitch, song choice and audience response.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Duet Singing",
+            image: "https://i.ibb.co/2R7Q28b/duet-singing.png",
+            fee: "₹400 / Team",
+            rules: [
+                "Singers should be from the same college.",
+                "No gender specification.",
+                "Songs of any language/genre are allowed.",
+                "Medleys are allowed.",
+                "Time limit: 4 minutes.",
+                "Singers may use karaoke or bring their own instruments.",
+                "Karaoke must be submitted 2 days prior in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
+                "Singing on seeing lyrics is not allowed.",
+                "Multiple entries are allowed per college.",
+                "Preliminary round will be conducted based on the number of entries; details will be shared after registration closes.",
+                "Judging criteria: vocal quality, dynamics, time sense, stage presence and audience response.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Solo Instrumental",
+            image: "https://i.ibb.co/7JqHXBvB/Solo-instrument.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Entries: 3 per college.",
+                "Time limit: 4 minutes.",
+                "Participants must inform their instrument of choice during online registration.",
+                "No instrument or additional sound equipment will be provided."
+            ],
+            contacts: []
+        },
+        {
+            title: "Battle of Bands",
+            image: "https://i.ibb.co/3m4X7TSK/Battle-of-bands.jpg",
+            fee: "₹1500 / Team",
+            rules: [
+                "Participants must be from the same college.",
+                "Maximum 12 members for the team.",
+                "Time limit maximum up to 15 minutes.",
+                "No instruments provided from our side."
+            ],
+            contacts: []
+        }
+    ],
+
+    dance: [
+        {
+            title: "Fashion Parade",
+            image: "https://i.ibb.co/W4CbRGCC/Fashion-parade.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Team event with a minimum of 8 members to a maximum of 25 members, including narrator and helper, if any.",
+                "More than one team from a college is allowed to compete.",
+                "Theme: Open theme.",
+                "Maximum time limit: 15 minutes, with no gap during the performance, including introduction and theme explanation.",
+                "Participants should carry audio tracks in MP3 format in a pen drive and WhatsApp the same beforehand to the respective in-charges.",
+                "Stage sets are not allowed.",
+                "Background video or picture can be depicted on the LED screen but must be submitted a day before the event.",
+                "Vulgarity is strictly prohibited. Any form of obscenity will lead to disqualification.",
+                "Judging will be based on theme, creativity, apparel, stage presence and overall impact.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Solo Dance",
+            image: "https://i.ibb.co/ycvf5yYd/Solo-dance.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Every participant must be a college/university student.",
+                "There is no specific theme for the competition.",
+                "Marks will be awarded based on creativity, music, stage presence, dance variation, synchronisation, entertainment value and skills.",
+                "Participants must bring their music in a pen drive.",
+                "Participants must report latest at the competition desk 45 minutes before the start of the competition.",
+                "Each participant will have a maximum of 4–5 minutes to demonstrate their style and expertise.",
+                "Timing will begin with the first choreographed movement or note of music.",
+                "Timing will end with the last choreographed movement or note of music, whichever comes last.",
+                "Final decision regarding any matter lies in the hands of the organisers and judges and is binding."
+            ],
+            contacts: []
+        },
+        {
+            title: "Duet Dance",
+            image: "https://i.ibb.co/5Wxn2Ss8/Duet-dancing.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Time limit: 3–4 minutes; do not exceed the time limit.",
+                "Songs: Any language and genre.",
+                "Audio must be submitted beforehand in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
+                "Participants should be from the same college.",
+                "No gender specifications.",
+                "Any number of teams from one college are welcome.",
+                "Theme: Anything of your choice; not a specific requirement.",
+                "Use of props and stage sets should be informed prior.",
+                "Any article that can make the stage messy, such as water, lighting, matchsticks and powder, is prohibited.",
+                "Judging criteria: dance form, compatibility, coordination, expression, stage and prop usage, costume and audience quotient.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Adaptunes",
+            image: "https://i.ibb.co/HLgntPk6/Adaptunes.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "It is an individual competition.",
+                "Duration: 2–2.5 minutes.",
+                "Multiple entries per college are allowed, maximum 5.",
+                "Songs or music will be played continuously at random from any language.",
+                "Participants should dance according to the music played.",
+                "Wherever required, props should be used.",
+                "Judging will be based on adaptation, dance moves, continuity, expression, audience response, etc.",
+                "Time will be announced 1 day prior to the event.",
+                "Participants are requested to assemble near the stage 1 hour prior to the event.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Replica",
+            image: "https://i.ibb.co/ycxqw3CW/Replica.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Only first 15 registrations are accepted due to time restrictions.",
+                "No prelims will be conducted.",
+                "Time limit: 5–7 minutes including on-stage arrangements.",
+                "Participants have to replicate any recognised Indian movie song of any Indian language.",
+                "Participants can merge more than one song within the time limit.",
+                "Participants would be made to dance once the submitted video song is being projected.",
+                "Props/accessories are allowed. Sharp and dangerous props are strictly prohibited.",
+                "Any article that can make the stage messy is prohibited.",
+                "Props are not provided from our side.",
+                "Properly edited video (MP4 track) must be sent to the respective in-charges.",
+                "Any form of vulgarity or obscenity in song selection or costume will lead to disqualification.",
+                "Replication of YouTube videos by online choreographers is not allowed.",
+                "Judging criteria: synchronisation with the video, coordination, costume and presentation, overall perfection and maintenance of time limit."
+            ],
+            contacts: []
+        },
+        {
+            title: "Choreonite",
+            image: "https://i.ibb.co/DPMxkwq6/Choreonite.jpg",
+            fee: "₹200 / Head",
+            rules: [
+                "Only one team per college with up to 20 participants.",
+                "Time limit: 5–10 minutes. Exceeding the time limit will lead to point deduction.",
+                "Maximum 16 teams can register, with priority based on order of registration.",
+                "Songs of any language and genre are accepted.",
+                "Track should be submitted in MP3 format in a pen drive 1 day prior to the event.",
+                "Freestyle props can be used and collected by the participants.",
+                "Anything that makes the stage messy and slippery, including water, oily/soapy liquids, matchsticks, glitter and confetti, is strictly prohibited.",
+                "Judging criteria: choreography, coordination and perfection, facial expression and body language, props usage and costumes.",
+                "Judge's decision will be final."
+            ],
+            contacts: []
+        }
+    ],
+
+    online: [
+        {
+            title: "Memes",
+            image: "https://i.ibb.co/C5Q0Sc2N/memes.png",
+            fee: "FREE",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Either photo meme or video meme can be submitted.",
+                "Originality is important.",
+                "Memes should be sent through WhatsApp or mail ID.",
+                "Memes should be sent in document form for better clarity.",
+                "Name, college name, year of study and Instagram ID must be sent along with the meme.",
+                "Winners will be selected based on the number of likes.",
+                "Use of bot likes will lead to disqualification.",
+                "Meme contest admin's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Reels",
+            image: "https://i.ibb.co/C5Q0Sc2N/memes.png",
+            fee: "₹50 / Head",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Duration of up to 60 seconds is allowed.",
+                "Name, college name, year of study and Instagram ID must be sent along with the reel.",
+                "Originality is important.",
+                "Reels video dimension is based on participant's wish.",
+                "Reels should be sent to the in-charge's mail ID.",
+                "Reels should be sent in document form for better clarity.",
+                "Use of property is allowed.",
+                "Use of bot likes will lead to disqualification.",
+                "Reel contest admin's decision is final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Painting",
+            image: "https://i.ibb.co/ccBCpR1F/paintings.png",
+            fee: "₹50 / Head",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Painting should be portrait and should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Sign your artwork with your name.",
+                "Plagiarism will lead to disqualification.",
+                "Name, college name, year of study and Instagram ID must be sent along with the entry.",
+                "Winner and runner will be selected based on number of likes.",
+                "Use of bot likes will lead to disqualification.",
+                "Painting contest admin's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Mandala",
+            image: "https://i.ibb.co/vvH9Pbfs/mandala.png",
+            fee: "₹50 / Head",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Artwork can be done using any physical media.",
+                "Artwork should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Winner and runner will be selected based on number of likes.",
+                "Name, college name, year of study and Instagram ID must be sent along with the artwork.",
+                "Admin's decision will be final."
+            ],
+            contacts: []
+        },
+        {
+            title: "Photography",
+            image: "https://i.ibb.co/tMYdk5rG/photography.png",
+            fee: "₹50 / Person",
+            rules: [
+                "Photo should be original.",
+                "One photo per person.",
+                "Should submit before the due date.",
+                "No editing allowed.",
+                "Winners will be announced based on judge's decision.",
+                "Special prize will be based on likes.",
+                "Name, college name, year of study and Instagram ID must be sent along with the photo."
+            ],
+            contacts: []
+        },
+        {
+            title: "Poetry - English",
+            image: "https://i.ibb.co/20hGHw9r/poetry-english.png",
+            fee: "₹50 / Person",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Plagiarism will lead to disqualification.",
+                "Winners and runners will be based on judge's decision.",
+                "Special prize will be based on number of likes.",
+                "Judge's decision will be final.",
+                "Name, college name, year of study and Instagram ID must be sent along with the poem."
+            ],
+            contacts: []
+        },
+        {
+            title: "Poetry - Tamil",
+            image: "https://i.ibb.co/PvF3DRtj/poetry-tamil.png",
+            fee: "₹50 / Person",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Plagiarism will lead to disqualification.",
+                "Winners and runners will be based on judge's decision.",
+                "Special prize will be based on number of likes.",
+                "Judge's decision will be final.",
+                "Name, college name, year of study and Instagram ID must be sent along with the poem."
+            ],
+            contacts: []
+        },
+        {
+            title: "Movie Frame Recreation",
+            image: "https://i.ibb.co/1YBXNGRf/movie-frame-recreation.png",
+            fee: "₹50 / Person",
+            rules: [
+                "Theme can be of any content.",
+                "One entry per person.",
+                "Multiple entries are allowed from one college.",
+                "Posters from any movie can be used as reference.",
+                "Any kind of costumes and accessories can be used. Minor editing and colour grading are allowed.",
+                "Entries should be sent in document through WhatsApp or mail ID to the in-charges.",
+                "References should also be included in the document.",
+                "Entries should be sent along with name, college name, year of study, Instagram ID and contact number.",
+                "Use of bot likes will lead to disqualification.",
+                "No offensive contents are allowed.",
+                "Winners will be selected on the basis of number of likes and judge decision."
+            ],
+            contacts: []
+        },
+        {
+            title: "Short Story - English",
+            image: "https://i.ibb.co/bjKRYjz6/story-writing-english.png",
+            fee: "₹50 / Person",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Plagiarism will lead to disqualification.",
+                "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Winners will be based on judge's decision.",
+                "Name, college name, year of study and Instagram ID must be sent along with the work."
+            ],
+            contacts: []
+        },
+        {
+            title: "Short Story - Tamil",
+            image: "https://i.ibb.co/JW5yvcMJ/story-writing-tamil.png",
+            fee: "₹50 / Person",
+            rules: [
+                "One entry per participant is allowed.",
+                "There is no restriction in number of entries from each college.",
+                "Plagiarism will lead to disqualification.",
+                "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+                "Winners will be based on judge's decision.",
+                "Name, college name, year of study and Instagram ID must be sent along with the work."
+            ],
+            contacts: []
+        }
+    ]
+};
+
+const categoryGrid = document.querySelector(".category-grid");
+const eventPages = document.querySelectorAll(".event-page");
+const eventDetails = document.getElementById("eventDetails");
+
+function showCategory(category) {
+    categoryGrid.style.display = "none";
+    eventPages.forEach(page => page.classList.remove("active"));
+    eventDetails.classList.remove("active");
+
+    const page = document.getElementById(category + "Page");
+    const container = document.getElementById(category + "Events");
+
+    if (!page || !container) return;
+
+    container.innerHTML = "";
+
+    culturalEvents[category].forEach((event, index) => {
+        const card = document.createElement("article");
+        card.className = "event-card";
+
+        card.innerHTML = `
+            <div class="event-card-image">
+                <img src="${event.image}" alt="${event.title}">
+            </div>
+            <div class="event-card-overlay"></div>
+            <div class="event-card-content">
+                <span>${String(index + 1).padStart(2, "0")}</span>
+                <h3>${event.title}</h3>
+                <button class="event-card-action" type="button">
+                    VIEW DETAILS <b>→</b>
+                </button>
+            </div>
+        `;
+
+        card.addEventListener("click", () => showDetails(category, index));
+        container.appendChild(card);
+    });
+
+    page.classList.add("active");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function showDetails(category, index) {
+    const event = culturalEvents[category][index];
+    if (!event) return;
+
+    eventPages.forEach(page => page.classList.remove("active"));
+    categoryGrid.style.display = "none";
+
+    document.getElementById("detailsCategory").textContent =
+        category.toUpperCase() + " · CULTURALS";
+
+    document.getElementById("detailsTitle").textContent = event.title;
+
+    const image = document.getElementById("detailsImage");
+    image.src = event.image;
+    image.alt = event.title;
+    image.style.display = "block";
+
+    const rules = document.getElementById("detailsRules");
+    rules.innerHTML = "";
+
+    if (event.rules && event.rules.length) {
+        event.rules.forEach(rule => {
+            const li = document.createElement("li");
+            li.textContent = rule;
+            rules.appendChild(li);
+        });
+    }
+
+    const fee = document.getElementById("detailsFee");
+
+    if (event.fee) {
+        fee.innerHTML = `
+            <span>REGISTRATION FEE</span>
+            <strong>${event.fee}</strong>
+        `;
+        fee.style.display = "flex";
+    } else {
+        fee.style.display = "none";
+    }
+
+    const contacts = document.getElementById("detailsContacts");
+    contacts.innerHTML = "";
+
+    if (event.contacts && event.contacts.length) {
+        event.contacts.forEach(contact => {
+            const card = document.createElement("div");
+            card.className = "contact-card";
+            card.innerHTML = `
+                <strong>${contact.name}</strong>
+                <span>${contact.phone}</span>
+            `;
+            contacts.appendChild(card);
+        });
+    }
+
+    const register = document.getElementById("registerButton");
+    register.href = event.register || "#";
+
+    eventDetails.classList.add("active");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function backToCategories() {
+    eventPages.forEach(page => page.classList.remove("active"));
+    eventDetails.classList.remove("active");
+    categoryGrid.style.display = "grid";
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menu-button");
+    const nav = document.querySelector(".main-nav");
+
+    if (!menuButton || !nav) return;
+
+    function openMenu() {
+        nav.classList.add("active");
+        menuButton.classList.add("active");
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.setAttribute("aria-label", "Close menu");
+        document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+        nav.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+        document.body.classList.remove("menu-open");
+    }
+
+    menuButton.addEventListener("click", () => {
+        nav.classList.contains("active") ? closeMenu() : openMenu();
+    });
+
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && nav.classList.contains("active")) closeMenu();
+    });
+});
+</script>
+
+</body>
+</html>
