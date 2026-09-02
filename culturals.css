@@ -1962,9 +1962,9 @@ button {
     ===================================================== */
 
     .category-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 12px;
+        gap: 8px;
     }
 
     .category-card {
@@ -2223,15 +2223,27 @@ button {
     .section-heading h2 {
         font-size: 52px;
     }
+	
+	.category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .category-card,
+    .event-card {
+        aspect-ratio: 4 / 5;
+    }
+}
 
     .category-card,
     .event-card,
     .details-image {
         aspect-ratio: 4 / 5;
-    }
-
-    .events-grid {
-        grid-template-columns: 1fr;
     }
 
     .event-page {
@@ -2271,6 +2283,22 @@ button {
     .category-section {
         padding: 50px 0 70px;
     }
+	
+	.category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .category-card,
+    .event-card {
+        aspect-ratio: 4 / 5;
+    }
+}
 
     .category-card,
     .event-card,
@@ -2278,11 +2306,66 @@ button {
         aspect-ratio: 4 / 5;
     }
 
+    .footer-logo {
+        font-size: 43px;
+    }
+}
+
+/* =========================================================
+   FINAL MOBILE GRID OVERRIDE
+   2 CARDS PER ROW — CATEGORY + EVENTS
+========================================================= */
+
+@media (max-width: 700px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .category-card,
+    .event-card {
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 430px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 7px;
     }
 
-    .footer-logo {
-        font-size: 43px;
+    .category-card,
+    .event-card {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 380px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .category-card,
+    .event-card {
+        aspect-ratio: 4 / 5;
     }
 }

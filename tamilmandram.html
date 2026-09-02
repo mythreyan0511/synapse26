@@ -1,22 +1,985 @@
 <!DOCTYPE html>
 <html lang="ta">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>ROWTHIRAM '26 | தமிழ் மன்றம்</title>
 
-    <title>ரௌத்திரம் ’26 | தமிழ்த்திருவிழா</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="tamilmandram.css"
-    >
+    <style>
 
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top, rgba(148, 108, 32, 0.10), transparent 35%),
+                #050505;
+
+            color: #eee;
+
+            font-family: "Noto Serif Tamil", serif;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            width: 100%;
+
+            background: rgba(0, 0, 0, 0.97);
+
+            border-bottom: 1px solid rgba(202, 158, 62, 0.25);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1250px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 25px;
+
+            padding: 10px 18px;
+
+            overflow-x: auto;
+        }
+
+        .nav-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            flex-shrink: 0;
+
+            color: #d8d8d8;
+
+            text-decoration: none;
+
+            font-family: Georgia, serif;
+
+            font-size: 11px;
+
+            line-height: 1.3;
+
+            text-align: center;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #d5a846;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            max-width: 1000px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 55px 20px 35px;
+        }
+
+        .college-name {
+            color: #d5aa4b;
+
+            font-size: 27px;
+
+            font-weight: 700;
+
+            margin-bottom: 5px;
+        }
+
+        .hero-subtitle {
+            color: #cfcfcf;
+
+            font-size: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-title {
+            color: #e1b54f;
+
+            font-size: clamp(40px, 7vw, 72px);
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-shadow:
+                0 0 20px rgba(218, 171, 66, 0.15);
+
+            margin-bottom: 8px;
+        }
+
+        .hero-tamil {
+            color: #e8e8e8;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
+
+        .date-badge {
+            display: inline-block;
+
+            border: 1px solid #9e7628;
+
+            background: rgba(158, 118, 40, 0.08);
+
+            color: #d9ad4b;
+
+            padding: 7px 22px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            box-shadow:
+                0 0 25px rgba(190, 143, 42, 0.08);
+        }
+
+
+        /* =========================================
+           DECORATIVE DIVIDER
+        ========================================= */
+
+        .royal-divider {
+            width: 100%;
+
+            max-width: 700px;
+
+            margin: 10px auto 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .royal-divider::before,
+        .royal-divider::after {
+            content: "";
+
+            height: 1px;
+
+            flex: 1;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #9c7529,
+                    transparent
+                );
+        }
+
+        .royal-divider span {
+            color: #c79a3c;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .container {
+            width: min(1100px, calc(100% - 35px));
+
+            margin: auto;
+
+            padding-bottom: 80px;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .intro {
+            max-width: 850px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .section-heading {
+            color: #ddb14c;
+
+            font-size: 26px;
+
+            margin-bottom: 8px;
+        }
+
+        .heading-line {
+            width: 120px;
+
+            height: 2px;
+
+            background: #a77b28;
+
+            margin: 0 auto 22px;
+        }
+
+        .intro p {
+            color: #cfcfcf;
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            text-align: justify;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           CATEGORY SECTION
+        ========================================= */
+
+        .category-section {
+            margin-top: 45px;
+        }
+
+        .category-title {
+            text-align: center;
+
+            color: #ddb14c;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .category-subtitle {
+            text-align: center;
+
+            color: #999;
+
+            font-size: 13px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           CATEGORY CARDS
+        ========================================= */
+
+        .category-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+        .category-card {
+            position: relative;
+
+            min-height: 250px;
+
+            padding: 35px 25px;
+
+            border: 1px solid #77591e;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(34, 27, 11, 0.96),
+                    rgba(8, 8, 8, 0.98)
+                );
+
+            text-align: center;
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .category-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            background: rgba(210, 164, 58, 0.06);
+
+            top: -90px;
+            right: -90px;
+        }
+
+        .category-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 2px;
+
+            bottom: 0;
+            left: 0;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #c59635,
+                    transparent
+                );
+
+            transform: scaleX(0);
+
+            transition: 0.35s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #c49738;
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.65),
+                0 0 30px rgba(193, 145, 48, 0.08);
+        }
+
+        .category-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .category-icon {
+            font-size: 48px;
+
+            margin-bottom: 15px;
+
+            display: block;
+        }
+
+        .category-name {
+            color: #e0b44e;
+
+            font-size: 29px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        .category-count {
+            color: #aaa;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .explore {
+            color: #d4a744;
+
+            font-family: Georgia, serif;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================
+           CATEGORY CONTENT
+        ========================================= */
+
+        .category-content {
+            display: none;
+
+            margin-top: 55px;
+
+            animation: fadeIn 0.5s ease;
+        }
+
+        .category-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-content-header {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            background: transparent;
+
+            border: 1px solid #72551c;
+
+            color: #cba044;
+
+            padding: 8px 18px;
+
+            border-radius: 25px;
+
+            font-family: "Noto Serif Tamil", serif;
+
+            cursor: pointer;
+
+            margin-bottom: 22px;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            border-color: #c79a38;
+
+            background: rgba(199, 154, 56, 0.08);
+        }
+
+        .category-content-title {
+            color: #e0b34d;
+
+            font-size: 34px;
+
+            margin-bottom: 5px;
+        }
+
+        .category-content-desc {
+            color: #888;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           EVENT CARDS
+        ========================================= */
+
+        .event-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .event-card {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #15130e,
+                    #080808
+                );
+
+            border: 1px solid #604b20;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .event-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 4px;
+            height: 100%;
+
+            background: #b4872e;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #b88d35;
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.55);
+        }
+
+        .event-icon {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .event-name {
+            color: #e0b34d;
+
+            font-size: 21px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .event-description {
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+        .event-view {
+            color: #c99b3b;
+
+            font-family: Georgia, serif;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================
+           MODAL
+        ========================================= */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.86);
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            z-index: 2000;
+
+            backdrop-filter: blur(8px);
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-box {
+            width: min(760px, 100%);
+
+            max-height: 88vh;
+
+            overflow-y: auto;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #17140d,
+                    #070707
+                );
+
+            border: 1px solid #96702a;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            position: relative;
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-box::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .modal-box::-webkit-scrollbar-thumb {
+            background: #806124;
+
+            border-radius: 10px;
+        }
+
+        .close-modal {
+            position: absolute;
+
+            top: 14px;
+            right: 18px;
+
+            width: 35px;
+            height: 35px;
+
+            border-radius: 50%;
+
+            border: 1px solid #6d531f;
+
+            background: transparent;
+
+            color: #d6a946;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+        .modal-icon {
+            font-size: 40px;
+
+            margin-bottom: 8px;
+        }
+
+        .modal-title {
+            color: #e2b54e;
+
+            font-size: 28px;
+
+            margin-bottom: 7px;
+        }
+
+        .modal-category {
+            color: #8d8d8d;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+        }
+
+        .rules-heading {
+            color: #d4a542;
+
+            font-size: 18px;
+
+            border-bottom: 1px solid #5d471d;
+
+            padding-bottom: 8px;
+
+            margin-bottom: 15px;
+        }
+
+        .rules-list {
+            padding-left: 23px;
+        }
+
+        .rules-list li {
+            color: #ccc;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 9px;
+
+            padding-left: 4px;
+        }
+
+        .rules-list li::marker {
+            color: #c59738;
+        }
+
+
+        /* =========================================
+           SPECIAL DEBATE
+        ========================================= */
+
+        .special-section {
+            margin-top: 70px;
+
+            padding: 35px;
+
+            border: 1px solid #74581e;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(37, 28, 11, 0.7),
+                    rgba(5, 5, 5, 0.9)
+                );
+
+            text-align: center;
+        }
+
+        .special-section h2 {
+            color: #e0b34d;
+
+            font-size: 26px;
+
+            margin-bottom: 10px;
+        }
+
+        .special-section p {
+            color: #aaa;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           SCHEDULE
+        ========================================= */
+
+        .schedule-section {
+            margin-top: 60px;
+        }
+
+        .schedule-table-wrapper {
+            overflow-x: auto;
+
+            border: 1px solid #57431c;
+
+            border-radius: 12px;
+        }
+
+        .schedule-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 650px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 13px 15px;
+
+            border-bottom: 1px solid #2e281b;
+
+            text-align: left;
+
+            font-size: 13px;
+        }
+
+        .schedule-table th {
+            color: #dfb14a;
+
+            background: #17130b;
+        }
+
+        .schedule-table td {
+            color: #c5c5c5;
+        }
+
+        .schedule-table tr:hover td {
+            background: rgba(177, 133, 42, 0.05);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 35px 20px 45px;
+
+            text-align: center;
+        }
+
+        .footer-line {
+            width: 100%;
+
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #72551f,
+                    transparent
+                );
+
+            margin-bottom: 22px;
+        }
+
+        footer p {
+            color: #666;
+
+            font-size: 12px;
+        }
+
+        footer .footer-title {
+            color: #b88c32;
+
+            font-size: 15px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card {
+                min-height: 210px;
+            }
+
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 40px;
+            }
+
+            .college-name {
+                font-size: 21px;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .intro p {
+                text-align: left;
+            }
+
+            .modal-box {
+                padding: 28px 22px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .nav-container {
+                justify-content: flex-start;
+
+                gap: 18px;
+            }
+
+            .nav-link {
+                font-size: 9px;
+            }
+
+            .hero {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .hero-title {
+                font-size: 35px;
+
+                letter-spacing: 1px;
+            }
+
+            .hero-tamil {
+                font-size: 14px;
+            }
+
+            .container {
+                width: min(100% - 24px, 1100px);
+            }
+
+            .section-heading,
+            .category-title {
+                font-size: 23px;
+            }
+
+            .event-card {
+                padding: 21px;
+            }
+
+            .special-section {
+                padding: 25px 18px;
+            }
+        }
+
+    </style>
 </head>
 
 
@@ -27,1098 +990,1156 @@
      NAVIGATION
 ========================================= -->
 
-<header class="tm-nav">
+<nav class="navbar">
 
-    <div class="tm-nav-inner">
+    <div class="nav-container">
 
+        <a class="nav-link" href="#">HOME</a>
 
-        <a
-            href="index.html"
-            class="tm-brand"
-        >
+        <a class="nav-link" href="#">Our<br>Sponsors</a>
 
-            <div class="tm-mark">
-                <span></span>
-            </div>
+        <a class="nav-link" href="#">About<br>GVMC</a>
 
-            <div class="tm-brand-text">
-                SYNAPSE <span>'26</span>
-            </div>
+        <a class="nav-link" href="#">About<br>Synapse</a>
 
-        </a>
+        <a class="nav-link" href="#">General<br>Instructions</a>
 
+        <a class="nav-link" href="#">Our<br>Events</a>
 
-        <div class="tm-nav-title">
-            🪔 தமிழ்மன்றம்
-        </div>
+        <a class="nav-link" href="#">Our<br>Guests</a>
 
+        <a class="nav-link" href="#">Our<br>Advisors</a>
 
-        <a
-            href="index.html"
-            class="tm-back"
-        >
-            ← முகப்புக்குத் திரும்ப
-        </a>
+        <a class="nav-link" href="#">Student<br>Council</a>
 
+        <a class="nav-link" href="#">Para<br>Council</a>
+
+        <a class="nav-link" href="#">Our<br>Gallery</a>
+
+        <a class="nav-link" href="#">For<br>Accommodation</a>
+
+        <a class="nav-link" href="#">Contact<br>Us</a>
 
     </div>
 
-</header>
-
+</nav>
 
 
 <!-- =========================================
      HERO
 ========================================= -->
 
-<section class="tm-hero">
+<header class="hero">
 
-
-    <div class="tm-hero-pattern"></div>
-
-
-    <div class="tm-hero-content">
-
-
-        <div class="tm-eyebrow">
-
-            <span></span>
-
-            🏛️ அரசு வேலூர் மருத்துவக் கல்லூரி
-
-            <span></span>
-
-        </div>
-
-
-        <p class="tm-present">
-            பெருமையுடன் நடத்தும்
-        </p>
-
-
-        <h1>
-
-            ⚔️ ரௌத்திரம்
-            <span>’26</span>
-
-        </h1>
-
-
-        <div class="tm-hero-line">
-
-            <span></span>
-
-            <p>🪔 தமிழ்த்திருவிழா</p>
-
-            <span></span>
-
-        </div>
-
-
-        <p class="tm-hero-description">
-
-            தமிழ்மொழியின் வளத்தையும்,
-            தமிழரின் பண்பாட்டையும்,
-            கலை மற்றும் இலக்கியத்தின் சிறப்பையும்
-            கொண்டாடும் தமிழ்த்திருவிழா.
-
-        </p>
-
-
+    <div class="college-name">
+        அரசு வேலூர் மருத்துவக் கல்லூரி
     </div>
 
+    <div class="hero-subtitle">
+        பெருமையுடன் நடத்தும்
+    </div>
 
-</section>
+    <h1 class="hero-title">
+        ROWTHIRAM '26
+    </h1>
 
+    <div class="hero-tamil">
+        நமது கல்லூரியின் தமிழ்த் திருவிழா 🎉
+    </div>
+
+    <div class="date-badge">
+        📅 31.10.2026
+    </div>
+
+</header>
+
+
+<div class="royal-divider">
+    <span>❖</span>
+</div>
+
+
+<main class="container">
 
 
 <!-- =========================================
      INTRODUCTION
 ========================================= -->
 
-<section class="tm-section tm-intro">
+<section class="intro">
 
+    <h2 class="section-heading">
+        அறிமுகம்
+    </h2>
 
-    <div class="tm-section-heading">
+    <div class="heading-line"></div>
 
-        <span>01</span>
+    <p>
+        ROWTHIRAM '26 என்பது அரசு வேலூர் மருத்துவக் கல்லூரி
+        தமிழ் மன்றத்தின் சார்பில் நடைபெறும் தமிழ் இலக்கிய மற்றும்
+        பண்பாட்டு விழாவாகும். இந்நிகழ்வு மாணவர்களின் தமிழ்
+        மொழிப் புலமை, இலக்கிய ஆற்றல், கலைத்திறன், பேச்சுத்திறன்,
+        படைப்பாற்றல் மற்றும் தமிழ்ப் பண்பாட்டின் மீதான பற்றை
+        வளர்க்கும் நோக்கத்துடன் நடத்தப்படுகிறது.
+    </p>
 
-        <div>
-
-            <small>📜 தமிழ்த்திருவிழா</small>
-
-            <h2>
-                ரௌத்திரம் ’26
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="tm-intro-content">
-
-
-        <div class="tm-quote">
-
-            <span class="quote-mark">
-                “
-            </span>
-
-            <p>
-                இயல் · இசை · நாடகம்
-            </p>
-
-            <span class="quote-mark quote-bottom">
-                ”
-            </span>
-
-        </div>
-
-
-
-        <div class="tm-intro-text">
-
-
-            <p>
-
-                <strong>⚔️ ரௌத்திரம் ’26</strong>
-                என்பது அரசு வேலூர் மருத்துவக் கல்லூரியின்
-                தமிழ்மன்றத்தால், சினாப்ஸ் ’26 விழாவின்
-                ஒரு பகுதியாக நடத்தப்படும் தமிழ்த்திருவிழாவாகும்.
-
-            </p>
-
-
-            <p>
-
-                தமிழ்மொழி, இலக்கியம், இசை, கலை மற்றும்
-                படைப்பாற்றலைக் கொண்டாடும் இவ்விழா,
-                மாணவர்கள் தங்களின் திறமை, சிந்தனை,
-                படைப்பாற்றல் மற்றும் தமிழார்வத்தை
-                வெளிப்படுத்துவதற்கான ஒரு சிறப்பான
-                மேடையாக அமைகிறது.
-
-            </p>
-
-
-            <p>
-
-                2022, 2023, 2024 மற்றும் 2025 ஆம் ஆண்டு
-                மாணவர் குழுக்களின் பங்கேற்புடன்
-                இயல், இசை மற்றும் நாடகத்தின் பல்வேறு
-                பரிமாணங்களை ஒருங்கிணைக்கும்
-                தமிழின் பெருவிழாவாக ரௌத்திரம் ’26 அமைகிறது.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
+    <p>
+        2022, 2023, 2024 மற்றும் 2025 ஆம் ஆண்டு மாணவர்களின்
+        உற்சாகமான பங்கேற்புடன் நடைபெறும் இவ்விழா, இயல், இசை
+        மற்றும் நாடகம் ஆகிய முத்தமிழின் சிறப்பை எடுத்துரைக்கும்
+        பல்வேறு போட்டிகளை உள்ளடக்கியதாக அமையும்.
+    </p>
 
 </section>
 
 
-
 <!-- =========================================
-     COMPETITIONS
+     CATEGORY SELECTION
 ========================================= -->
 
-<section class="tm-section competitions">
+<section id="categories" class="category-section">
+
+    <h2 class="category-title">
+        நடைபெறும் நிகழ்ச்சிகள்
+    </h2>
+
+    <p class="category-subtitle">
+        ஒரு பிரிவைத் தேர்ந்தெடுத்து அதன் போட்டிகளைக் காண்க
+    </p>
 
 
-    <div class="tm-section-heading centered">
+    <div class="category-grid">
 
-        <span>02</span>
 
-        <div>
+        <!-- IYAL -->
 
-            <small>🏆 போட்டிகள்</small>
+        <div
+            class="category-card"
+            onclick="openCategory('iyal')"
+        >
 
-            <h2>
-                தமிழின் திறனரங்கம்
-            </h2>
+            <span class="category-icon">📜</span>
+
+            <div class="category-name">
+                இயல்
+            </div>
+
+            <div class="category-count">
+                5 போட்டிகள்
+            </div>
+
+            <div class="explore">
+                Explore Events →
+            </div>
+
+        </div>
+
+
+        <!-- ISAI -->
+
+        <div
+            class="category-card"
+            onclick="openCategory('isai')"
+        >
+
+            <span class="category-icon">🎵</span>
+
+            <div class="category-name">
+                இசை
+            </div>
+
+            <div class="category-count">
+                1 போட்டி
+            </div>
+
+            <div class="explore">
+                Explore Event →
+            </div>
+
+        </div>
+
+
+        <!-- NADAGAM -->
+
+        <div
+            class="category-card"
+            onclick="openCategory('nadagam')"
+        >
+
+            <span class="category-icon">🎭</span>
+
+            <div class="category-name">
+                நாடகம்
+            </div>
+
+            <div class="category-count">
+                3 போட்டிகள்
+            </div>
+
+            <div class="explore">
+                Explore Events →
+            </div>
 
         </div>
 
     </div>
 
+</section>
 
 
-    <div class="competition-grid">
+<!-- =========================================
+     IYAL
+========================================= -->
+
+<section
+    id="iyal"
+    class="category-content"
+>
+
+    <div class="category-content-header">
+
+        <button
+            class="back-button"
+            onclick="closeCategories()"
+        >
+            ← அனைத்து பிரிவுகளுக்கும்
+        </button>
+
+        <h2 class="category-content-title">
+            📜 இயல்
+        </h2>
+
+        <p class="category-content-desc">
+            தமிழ் இலக்கியம் மற்றும் படைப்பாற்றல் சார்ந்த போட்டிகள்
+        </p>
+
+    </div>
 
 
-
-        <!-- இயல் -->
-
-        <article class="competition-card">
+    <div class="event-grid">
 
 
-            <div class="card-top">
+        <!-- KAVITHAI -->
 
-                <span class="card-number">
-                    01
-                </span>
+        <div
+            class="event-card"
+            onclick="openEvent('kavithai')"
+        >
 
-                <span class="card-tamil">
-                    📜 இயல்
-                </span>
-
+            <div class="event-icon">
+                📝
             </div>
 
-
-
-            <div class="card-symbol">
-                📜
+            <div class="event-name">
+                கவிதைப் போட்டி
             </div>
 
-
-
-            <h3>
-                இயல்
-            </h3>
-
-
-            <p class="card-subtitle">
-                ✍️ எழுத்தும் எண்ணமும்
-            </p>
-
-
-
-            <ul>
-
-                <li>
-                    ✍️ கவிதைப் போட்டி
-                </li>
-
-                <li>
-                    💌 மடல் போட்டி
-                </li>
-
-                <li>
-                    🎨 ஓவியப் போட்டி
-                </li>
-
-                <li>
-                    🗣️ பேச்சுப் போட்டி
-                </li>
-
-                <li>
-                    📖 சிறுகதைப் போட்டி
-                </li>
-
-                <li>
-                    🗣️ தமிழில் மட்டும் பேசு
-                </li>
-
-            </ul>
-
-
-        </article>
-
-
-
-        <!-- இசை -->
-
-        <article class="competition-card">
-
-
-            <div class="card-top">
-
-                <span class="card-number">
-                    02
-                </span>
-
-                <span class="card-tamil">
-                    🎵 இசை
-                </span>
-
+            <div class="event-description">
+                கவிதை எழுதும் போட்டி
             </div>
 
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
 
 
-            <div class="card-symbol">
+        <!-- MADAL -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('madal')"
+        >
+
+            <div class="event-icon">
+                ✉️
+            </div>
+
+            <div class="event-name">
+                மடல் (கடிதம்)
+            </div>
+
+            <div class="event-description">
+                உரைநடை வடிவிலான கடிதம் எழுதும் போட்டி
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
+
+
+        <!-- OV IYAM -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('oviyam')"
+        >
+
+            <div class="event-icon">
+                🎨
+            </div>
+
+            <div class="event-name">
+                ஓவியப் போட்டி
+            </div>
+
+            <div class="event-description">
+                படைப்பாற்றல் மற்றும் ஓவியத் திறனை வெளிப்படுத்தும் போட்டி
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
+
+
+        <!-- SPEECH -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('peechu')"
+        >
+
+            <div class="event-icon">
                 🎤
             </div>
 
-
-
-            <h3>
-                இசை
-            </h3>
-
-
-            <p class="card-subtitle">
-                🎶 குரலும் இசையும்
-            </p>
-
-
-
-            <ul>
-
-                <li>
-                    🎤 பாட்டுப் போட்டி
-                </li>
-
-            </ul>
-
-
-
-            <div class="card-closing">
-
-                🎶 இசையின் வழியே<br>
-                தமிழின் இனிமை
-
+            <div class="event-name">
+                பேச்சுப் போட்டி
             </div>
 
-
-        </article>
-
-
-
-        <!-- நாடகம் -->
-
-        <article class="competition-card">
-
-
-            <div class="card-top">
-
-                <span class="card-number">
-                    03
-                </span>
-
-                <span class="card-tamil">
-                    🎭 நாடகம்
-                </span>
-
+            <div class="event-description">
+                தமிழ் பேச்சுத்திறன் மற்றும் மேடை ஆளுமை
             </div>
 
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
 
 
-            <div class="card-symbol">
+        <!-- SHORT STORY -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('sirukathai')"
+        >
+
+            <div class="event-icon">
+                📖
+            </div>
+
+            <div class="event-name">
+                சிறுகதை
+            </div>
+
+            <div class="event-description">
+                கற்பனை மற்றும் படைப்பாற்றலை வெளிப்படுத்தும் சிறுகதைப் போட்டி
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ISAI
+========================================= -->
+
+<section
+    id="isai"
+    class="category-content"
+>
+
+    <div class="category-content-header">
+
+        <button
+            class="back-button"
+            onclick="closeCategories()"
+        >
+            ← அனைத்து பிரிவுகளுக்கும்
+        </button>
+
+        <h2 class="category-content-title">
+            🎵 இசை
+        </h2>
+
+        <p class="category-content-desc">
+            தமிழ் இசை சார்ந்த போட்டி
+        </p>
+
+    </div>
+
+
+    <div class="event-grid">
+
+        <div
+            class="event-card"
+            onclick="openEvent('paattu')"
+        >
+
+            <div class="event-icon">
+                🎵
+            </div>
+
+            <div class="event-name">
+                பாட்டுப்போட்டி
+            </div>
+
+            <div class="event-description">
+                நாட்டுப்புற அல்லது தமிழ் திரைப்படப் பாடல்கள்
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     NADAGAM
+========================================= -->
+
+<section
+    id="nadagam"
+    class="category-content"
+>
+
+    <div class="category-content-header">
+
+        <button
+            class="back-button"
+            onclick="closeCategories()"
+        >
+            ← அனைத்து பிரிவுகளுக்கும்
+        </button>
+
+        <h2 class="category-content-title">
+            🎭 நாடகம்
+        </h2>
+
+        <p class="category-content-desc">
+            நடனம், நாடகம் மற்றும் தனித்திறன் சார்ந்த போட்டிகள்
+        </p>
+
+    </div>
+
+
+    <div class="event-grid">
+
+
+        <!-- DANCE -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('nadanam')"
+        >
+
+            <div class="event-icon">
+                💃
+            </div>
+
+            <div class="event-name">
+                நடனப் போட்டி
+            </div>
+
+            <div class="event-description">
+                தமிழ் சார்ந்த பல்வேறு நடன வடிவங்கள்
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
+
+
+        <!-- DRAMA -->
+
+        <div
+            class="event-card"
+            onclick="openEvent('nadaga')"
+        >
+
+            <div class="event-icon">
                 🎭
             </div>
 
+            <div class="event-name">
+                நாடகப் போட்டி
+            </div>
+
+            <div class="event-description">
+                புராணம், விழிப்புணர்வு, சமூகக் கருத்து அல்லது நகைச்சுவை நாடகங்கள்
+            </div>
+
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
+
+        </div>
 
 
-            <h3>
-                நாடகம்
-            </h3>
+        <!-- TAMIL MAGAN -->
 
+        <div
+            class="event-card"
+            onclick="openEvent('tamilmagan')"
+        >
 
-            <p class="card-subtitle">
-                🎬 மேடையும் வெளிப்பாடும்
-            </p>
+            <div class="event-icon">
+                👑
+            </div>
 
+            <div class="event-name">
+                தமிழ் மகன் – தமிழ் மகள்
+            </div>
 
+            <div class="event-description">
+                மூன்று சுற்றுகளைக் கொண்ட சிறப்புப் போட்டி
+            </div>
 
-            <ul>
+            <div class="event-view">
+                விதிமுறைகள் காண்க →
+            </div>
 
-                <li>
-                    💃 நடனப் போட்டி
-                </li>
-
-                <li>
-                    🎭 நாடகப் போட்டி
-                </li>
-
-                <li>
-                    👑 தமிழ் மகன் – தமிழ் மகள்
-                </li>
-
-            </ul>
-
-
-        </article>
-
+        </div>
 
     </div>
-
 
 </section>
 
 
-
 <!-- =========================================
-     SPECIAL EVENTS
+     SPECIAL PATTIMANDRAM
 ========================================= -->
 
-<section class="tm-section special">
-
-
-    <div class="tm-section-heading">
-
-        <span>03</span>
-
-        <div>
-
-            <small>✨ சிறப்பு நிகழ்வுகள்</small>
-
-            <h2>
-                சிறப்பின் மேடை
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="special-grid">
-
-
-
-        <article class="special-card">
-
-            <span class="special-number">
-                01
-            </span>
-
-            <div class="special-icon">
-                ⚖️
-            </div>
-
-            <h3>
-                பட்டிமன்றம்
-            </h3>
-
-            <p>
-
-                சிந்திக்கவும், விவாதிக்கவும்,
-                சிரிக்கவும் வைக்கும் சிறப்பு
-                பட்டிமன்றம்.
-
-            </p>
-
-            <p>
-
-                கருத்துகளின் மோதலையும்,
-                தமிழின் நயத்தையும் ஒரே மேடையில்
-                கொண்டுவரும் சிறப்பு நிகழ்வு.
-
-            </p>
-
-        </article>
-
-
-
-        <article class="special-card">
-
-            <span class="special-number">
-                02
-            </span>
-
-            <div class="special-icon">
-                🪔
-            </div>
-
-            <h3>
-                குத்துவிளக்கு ஏற்றுதல்
-            </h3>
-
-            <p>
-
-                சிறப்பு விருந்தினர்களின் வருகையுடன்
-                பாரம்பரிய முறைப்படி குத்துவிளக்கு
-                ஏற்றப்பட்டு விழா சிறப்பாகத் தொடங்கும்.
-
-            </p>
-
-        </article>
-
-
-
-        <article class="special-card">
-
-            <span class="special-number">
-                03
-            </span>
-
-            <div class="special-icon">
-                🎶
-            </div>
-
-            <h3>
-                தமிழ்த்தாய் வாழ்த்து
-            </h3>
-
-            <p>
-
-                தமிழ்த்தாய் வாழ்த்துடன் விழா தொடங்கி,
-                வரவேற்புரையைத் தொடர்ந்து
-                சிறப்பு நிகழ்வுகள் நடைபெறும்.
-
-            </p>
-
-        </article>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     PROGRAMME
-========================================= -->
-
-<section class="tm-section programme">
-
-
-    <div class="tm-section-heading centered">
-
-        <span>04</span>
-
-        <div>
-
-            <small>🕰️ நிகழ்ச்சி நிரல்</small>
-
-            <h2>
-                விழா நிகழ்வுகள்
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="programme-header">
-
-
-        <div>
-
-            <strong>
-                12
-            </strong>
-
-            <span>
-                அக்டோபர் 2026
-            </span>
-
-        </div>
-
-
-        <div class="programme-divider"></div>
-
-
-        <div>
-
-            <strong>
-                திங்கள்
-            </strong>
-
-            <span>
-                கல்லூரி அரங்கம்
-            </span>
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="programme-list">
-
-
-        <div class="programme-row">
-
-            <time>
-                காலை 10.00 – 10.10
-            </time>
-
-            <p>
-                🎶 தமிழ்த்தாய் வாழ்த்து மற்றும் வரவேற்புரை
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                காலை 10.10 – 10.20
-            </time>
-
-            <p>
-                💃 வரவேற்பு நடனம்
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                காலை 10.20 – 10.30
-            </time>
-
-            <p>
-                🪔 சிறப்பு விருந்தினர்கள் வருகை
-                மற்றும் குத்துவிளக்கு ஏற்றுதல்
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                காலை 10.30 – 10.45
-            </time>
-
-            <p>
-                🌺 சிறப்பு விருந்தினர் கௌரவிப்பு
-                மற்றும் சிறப்புரை
-            </p>
-
-        </div>
-
-
-        <div class="programme-row featured">
-
-            <time>
-                காலை 10.45 – மதியம் 12.30
-            </time>
-
-            <p>
-                ⚖️ பட்டிமன்றம்
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மதியம் 12.30 – 12.50
-            </time>
-
-            <p>
-                🏆 மேடையில்லாப் போட்டிகளுக்கான பரிசளிப்பு
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மதியம் 12.50 – 1.00
-            </time>
-
-            <p>
-                🙏 நன்றியுரை மற்றும் தேசிய கீதம்
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மதியம் 1.00 – 1.30
-            </time>
-
-            <p>
-                🍱 மதிய உணவு
-            </p>
-
-        </div>
-
-
-        <div class="programme-row featured">
-
-            <time>
-                மதியம் 1.30 – 2.00
-            </time>
-
-            <p>
-                🗣️ தமிழில் மட்டும் பேசு
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மதியம் 2.00 – 3.00
-            </time>
-
-            <p>
-                🎭 நாடகப் போட்டி
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மாலை 3.00 – 4.00
-            </time>
-
-            <p>
-                👑 தமிழ் மகன் – தமிழ் மகள்
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மாலை 4.00 – 5.00
-            </time>
-
-            <p>
-                🎤 பாட்டுப் போட்டி
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மாலை 5.00 – 6.00
-            </time>
-
-            <p>
-                💃 நடனப் போட்டி
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மாலை 6.00 – 6.20
-            </time>
-
-            <p>
-                🏆 பரிசளிப்பு விழா
-            </p>
-
-        </div>
-
-
-        <div class="programme-row">
-
-            <time>
-                மாலை 6.20 – 6.45
-            </time>
-
-            <p>
-                🙏 நன்றியுரை
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     PHILOSOPHY
-========================================= -->
-
-<section class="tm-section philosophy">
-
-
-    <div class="philosophy-ornament">
-        🪔
-    </div>
-
-
-    <div class="philosophy-content">
-
-
-        <small>
-            ❤️ தமிழின் திருவிழா
-        </small>
-
-
-        <h2>
-
-            இயல்.
-            <span>இசை.</span>
-            நாடகம்.
-
-        </h2>
-
-
-        <p>
-
-            எழுத்தில் தொடங்கி,
-            சொல்லாக மலர்ந்து,
-            இசையாக ஒலித்து,
-            நடனமாக அசைந்து,
-            நாடகமாக உயிர்பெறும்
-            தமிழின் பல்வேறு பரிமாணங்களையும்
-            ஒரே விழாவில் கொண்டாடும் திருநாள் —
-            <strong>ரௌத்திரம் ’26.</strong>
-
-        </p>
-
-
-        <p>
-
-            தமிழின் தொன்மையையும்,
-            இனிமையையும்,
-            வளத்தையும் அடுத்த தலைமுறையிடம்
-            கொண்டு செல்லும் ஒரு சிறப்பான முயற்சி.
-
-        </p>
-
-
-    </div>
-
-
-    <div class="philosophy-ornament">
-        🪔
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     ADVISORS
-========================================= -->
-
-<section class="tm-section advisors">
-
-
-    <div class="tm-section-heading centered">
-
-        <span>05</span>
-
-        <div>
-
-            <small>👨‍⚕️ நமது ஆலோசகர்கள்</small>
-
-            <h2>
-                தமிழ்மன்றத்தின் வழிகாட்டிகள்
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="advisor-grid">
-
-
-
-        <article class="tm-advisor">
-
-
-            <div class="advisor-symbol">
-                👨‍⚕️
-            </div>
-
-
-            <div class="advisor-info">
-
-                <span>
-                    ஆலோசகர்
-                </span>
-
-                <h3>
-                    மருத்துவர் எல். டி. கலைச்செல்வி, எம்.டி.
-                </h3>
-
-                <p>
-                    மூத்த உதவிப் பேராசிரியர்
-                </p>
-
-                <small>
-                    தடயவியல் மருத்துவத் துறை
-                </small>
-
-            </div>
-
-
-        </article>
-
-
-
-        <article class="tm-advisor">
-
-
-            <div class="advisor-symbol">
-                👨‍⚕️
-            </div>
-
-
-            <div class="advisor-info">
-
-                <span>
-                    ஆலோசகர்
-                </span>
-
-                <h3>
-                    மருத்துவர் டி. பார்த்திபன், எம்.டி.
-                </h3>
-
-                <p>
-                    உதவிப் பேராசிரியர்
-                </p>
-
-                <small>
-                    பொது மருத்துவத் துறை
-                </small>
-
-            </div>
-
-
-        </article>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     GALLERY
-========================================= -->
-
-<section class="tm-section gallery">
-
-
-    <div class="tm-section-heading centered">
-
-        <span>06</span>
-
-        <div>
-
-            <small>🖼️ நினைவுகள்</small>
-
-            <h2>
-                தமிழ்மன்றக் காட்சியகம்
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="gallery-placeholder">
-
-
-        <div class="gallery-symbol">
-            🖼️
-        </div>
-
-
-        <p>
-            📸 ரௌத்திரம் ’26
-        </p>
-
-
-        <span>
-            தமிழின் நினைவுகளைப் பதிவு செய்யும் காட்சியகம்
-        </span>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     CLOSING
-========================================= -->
-
-<section class="tm-closing">
-
-
-    <div class="closing-ornament">
-        🪔
-    </div>
-
-
-    <p>
-        ❤️ தமிழை நேசிப்போம்.
-    </p>
-
-
-    <p>
-        🤝 தமிழால் ஒன்றிணைவோம்.
-    </p>
-
-
-    <p>
-        📜 தமிழைத் தலைமுறைகளுக்குக் கொண்டு செல்வோம்.
-    </p>
-
+<section class="special-section">
 
     <h2>
-        ⚔️ ரௌத்திரம் ’26
+        🎙️ சிறப்பு பட்டிமன்றம்
     </h2>
 
-
-    <span>
-        🪔 தமிழ்த்திருவிழா
-    </span>
-
-
-    <div class="closing-ornament">
-        🪔
-    </div>
-
+    <p>
+        விழாவின் சிறப்பு நிகழ்வாக பட்டிமன்றம் நடைபெறும்.
+        உத்தேச நடுவர்களாக டாக்டர் ஜி. ஞானசம்பந்தன்,
+        பட்டிமன்ற ராஜா, பாரதி பாஸ்கர், பேராசிரியர் பர்வன்
+        ல்தானா மற்றும் முத்துமரன் ஆகியோர் குறிப்பிடப்பட்டுள்ளனர்.
+    </p>
 
 </section>
 
+
+<!-- =========================================
+     SCHEDULE
+========================================= -->
+
+<section class="schedule-section">
+
+    <div class="category-content-header">
+
+        <h2 class="category-content-title">
+            🕐 நிகழ்ச்சி நிரல்
+        </h2>
+
+        <p class="category-content-desc">
+            31.10.2026 நிகழ்ச்சி நேரங்கள்
+        </p>
+
+    </div>
+
+
+    <div class="schedule-table-wrapper">
+
+        <table class="schedule-table">
+
+            <thead>
+
+                <tr>
+                    <th>வ.எண்</th>
+                    <th>நிகழ்வு</th>
+                    <th>நேரம்</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>வரவேற்பு உரை / தமிழ்த்தாய் வாழ்த்து</td>
+                    <td>10:00 – 10:10 AM</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>வரவேற்பு நடனம்</td>
+                    <td>10:10 – 10:20 AM</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>சிறப்பு விருந்தினர்கள் மேடையேற்றம் / குத்துவிளக்கு ஏற்றுதல்</td>
+                    <td>10:20 – 10:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>சிறப்பு விருந்தினர்களைக் கௌரவித்தல் மற்றும் சிறப்புரை</td>
+                    <td>10:30 – 10:45 AM</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>பட்டிமன்றம்</td>
+                    <td>10:45 AM – 12:30 PM</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>மேடையில்லாப் போட்டிகளுக்கான பரிசளிப்பு விழா</td>
+                    <td>12:30 – 12:50 PM</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td>நன்றியுரை / தேசிய கீதம்</td>
+                    <td>12:50 – 1:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>உணவு இடைவேளை</td>
+                    <td>1:00 – 1:30 PM</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td>“தமிழில் மட்டும் பேசு” போட்டி</td>
+                    <td>1:30 – 2:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>நாடகப் போட்டி</td>
+                    <td>2:00 – 3:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>11</td>
+                    <td>தமிழ் மகன் – தமிழ் மகள் போட்டி</td>
+                    <td>3:00 – 4:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>12</td>
+                    <td>பாட்டுப் போட்டி</td>
+                    <td>4:00 – 5:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>13</td>
+                    <td>நடனப் போட்டி</td>
+                    <td>5:00 – 6:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>14</td>
+                    <td>பரிசளிப்பு விழா</td>
+                    <td>6:00 – 6:20 PM</td>
+                </tr>
+
+                <tr>
+                    <td>15</td>
+                    <td>நன்றியுரை</td>
+                    <td>6:20 – 6:45 PM</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     MODAL
+========================================= -->
+
+<div
+    id="eventModal"
+    class="modal"
+    onclick="closeModalOutside(event)"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeModal()"
+        >
+            ×
+        </button>
+
+        <div
+            id="modalIcon"
+            class="modal-icon"
+        ></div>
+
+        <h2
+            id="modalTitle"
+            class="modal-title"
+        ></h2>
+
+        <div
+            id="modalCategory"
+            class="modal-category"
+        ></div>
+
+        <h3 class="rules-heading">
+            போட்டி விதிமுறைகள்
+        </h3>
+
+        <ul
+            id="modalRules"
+            class="rules-list"
+        ></ul>
+
+    </div>
+
+</div>
 
 
 <!-- =========================================
      FOOTER
 ========================================= -->
 
-<footer class="tm-footer">
+<footer>
 
+    <div class="footer-line"></div>
 
-    <div>
-        🏛️ அரசு வேலூர் மருத்துவக் கல்லூரி
-    </div>
+    <p>
+        அரசு வேலூர் மருத்துவக் கல்லூரி – தமிழ் மன்றம்
+    </p>
 
-
-    <div>
-        🪔 தமிழ்மன்றம் · ரௌத்திரம் ’26
-    </div>
-
-
-    <a href="index.html">
-        SYNAPSE ’26 ←
-    </a>
-
+    <p class="footer-title">
+        ROWTHIRAM '26
+    </p>
 
 </footer>
 
 
-</body>
+<script>
 
+    /* =========================================
+       CATEGORY NAVIGATION
+    ========================================= */
+
+    function openCategory(categoryId) {
+
+        document
+            .querySelectorAll(".category-content")
+            .forEach(section => {
+                section.classList.remove("active");
+            });
+
+        document
+            .getElementById("categories")
+            .style.display = "none";
+
+        const selected =
+            document.getElementById(categoryId);
+
+        selected.classList.add("active");
+
+        selected.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+
+    function closeCategories() {
+
+        document
+            .querySelectorAll(".category-content")
+            .forEach(section => {
+                section.classList.remove("active");
+            });
+
+        document
+            .getElementById("categories")
+            .style.display = "block";
+
+        document
+            .getElementById("categories")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+    }
+
+
+    /* =========================================
+       EVENT DATA
+    ========================================= */
+
+    const events = {
+
+        kavithai: {
+
+            icon: "📝",
+
+            title: "கவிதைப் போட்டி",
+
+            category: "இயல்",
+
+            rules: [
+
+                "தலைப்பு போட்டிக்கு 4 நாட்களுக்கு முன்பாக அறிவிக்கப்படும்.",
+
+                "போட்டியாளரின் சொந்தப் படைப்பாக இருக்க வேண்டும்.",
+
+                "படைப்புத் திருட்டு முற்றிலும் தடை செய்யப்படுகிறது.",
+
+                "கவிதை 20 வரிகளுக்கு மிகாமல் இருக்க வேண்டும்.",
+
+                "கவிதை எழுத வழங்கப்படும் நேரம்: 30 நிமிடங்கள்.",
+
+                "கருத்து, மொழிநடை, கற்பனை, அசல் தன்மை ஆகியவற்றின் அடிப்படையில் மதிப்பீடு செய்யப்படும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        madal: {
+
+            icon: "✉️",
+
+            title: "மடல் (கடிதம்)",
+
+            category: "இயல்",
+
+            rules: [
+
+                "தலைப்பு போட்டிக்கு 4 நாட்களுக்கு முன்பாக அறிவிக்கப்படும்.",
+
+                "உரைநடை வடிவில் எழுதப்பட வேண்டும்.",
+
+                "200 வார்த்தைகளுக்கு மிகாமல் இருக்க வேண்டும்.",
+
+                "நேரம்: 30 நிமிடங்கள்.",
+
+                "மொழிப்பிழையின்றி, அழகிய தமிழில் எழுத வேண்டும்.",
+
+                "படைப்பாற்றல், மொழிநடை மற்றும் உணர்வு வெளிப்பாடு ஆகியவற்றின் அடிப்படையில் மதிப்பீடு செய்யப்படும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        oviyam: {
+
+            icon: "🎨",
+
+            title: "ஓவியப் போட்டி",
+
+            category: "இயல்",
+
+            rules: [
+
+                "தலைப்பு போட்டிக்கு 4 நாட்களுக்கு முன்பாக அறிவிக்கப்படும்.",
+
+                "நேரம்: 45 நிமிடங்கள்.",
+
+                "வரைபடத் தாள் மட்டும் ஏற்பாட்டுக் குழுவால் வழங்கப்படும்.",
+
+                "ஓவியம் வரைவதற்குத் தேவையான அனைத்து பொருட்களையும் போட்டியாளர்கள் கொண்டு வர வேண்டும்.",
+
+                "தனிப்பட்ட படைப்பாக இருக்க வேண்டும்.",
+
+                "படைப்புத் திருட்டு அனுமதிக்கப்படாது.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        peechu: {
+
+            icon: "🎤",
+
+            title: "பேச்சுப் போட்டி",
+
+            category: "இயல்",
+
+            rules: [
+
+                "தலைப்பு போட்டிக்கு 4 நாட்களுக்கு முன்பாக அறிவிக்கப்படும்.",
+
+                "அதிகபட்ச நேரம்: 3 நிமிடங்கள்.",
+
+                "ஆங்கில வார்த்தைகளை பயன்படுத்தக் கூடாது.",
+
+                "கருத்து, பேச்சுத் திறன், மேடை ஆளுமை, உடல்மொழி மற்றும் சரளமான பேச்சு ஆகியவற்றின் அடிப்படையில் மதிப்பெண்கள் வழங்கப்படும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        sirukathai: {
+
+            icon: "📖",
+
+            title: "சிறுகதை",
+
+            category: "இயல்",
+
+            rules: [
+
+                "தலைப்பு போட்டிக்கு 4 நாட்களுக்கு முன்பாக அறிவிக்கப்படும்.",
+
+                "அதிகபட்சம் இரண்டு பக்கங்கள் மட்டுமே இருக்க வேண்டும்.",
+
+                "நேரம்: 45 நிமிடங்கள்.",
+
+                "தனிப்பட்ட சொந்தப் படைப்பாக இருக்க வேண்டும்.",
+
+                "கவிதை, கட்டுரை அல்லது பிற இலக்கிய வடிவங்கள் இடம்பெறக் கூடாது.",
+
+                "மொழிநடை, கற்பனை, கதைக்களம் மற்றும் படைப்பாற்றல் ஆகியவற்றின் அடிப்படையில் மதிப்பீடு செய்யப்படும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        paattu: {
+
+            icon: "🎵",
+
+            title: "பாட்டுப்போட்டி",
+
+            category: "இசை",
+
+            rules: [
+
+                "நாட்டுப்புற அல்லது தமிழ் திரைப்படப் பாடல்களைப் பாடலாம்.",
+
+                "தனிநபர் அல்லது அதிகபட்சம் இரண்டு பேர் இணைந்து பங்கேற்கலாம்.",
+
+                "பின்னணி இசையை போட்டியாளர்கள் தாங்களே கொண்டு வர வேண்டும்.",
+
+                "அதிகபட்ச நேரம்: 5 நிமிடங்கள்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        nadanam: {
+
+            icon: "💃",
+
+            title: "நடனப் போட்டி",
+
+            category: "நாடகம்",
+
+            rules: [
+
+                "இரண்டு முதல் பத்து பேர் வரை பங்கேற்கலாம்.",
+
+                "ஒவ்வொரு நிகழ்ச்சிக்கும் 5–10 நிமிடங்கள் வரை கால அவகாசம் வழங்கப்படும்.",
+
+                "பரதநாட்டியம், நாட்டுப்புற நடனம், தமிழ் திரைப்பட நடனம் உள்ளிட்ட அனைத்து தமிழ் சார்ந்த நடனங்களும் அனுமதிக்கப்படும்.",
+
+                "நடனப் பொருட்களைப் பயன்படுத்தலாம்.",
+
+                "இசையை போட்டியாளர்கள் தாங்களே கொண்டு வர வேண்டும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        nadaga: {
+
+            icon: "🎭",
+
+            title: "நாடகப் போட்டி",
+
+            category: "நாடகம்",
+
+            rules: [
+
+                "புராணம், விழிப்புணர்வு, சமூகக் கருத்து அல்லது நகைச்சுவை நாடகங்களை அரங்கேற்றலாம்.",
+
+                "அதிகபட்சம் 15 பேர் வரை பங்கேற்கலாம்.",
+
+                "அதிகபட்ச நேரம்: 15 நிமிடங்கள்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        },
+
+
+        tamilmagan: {
+
+            icon: "👑",
+
+            title: "தமிழ் மகன் – தமிழ் மகள்",
+
+            category: "நாடகம்",
+
+            rules: [
+
+                "போட்டி மூன்று சுற்றுகளாக நடைபெறும்.",
+
+                "முதல் சுற்று – நடைத்திறன்.",
+
+                "இரண்டாம் சுற்று – சிறப்புத் திறன் சார்ந்த நிகழ்ச்சிகள்.",
+
+                "மூன்றாம் சுற்று – தனித்திறன் வெளிப்பாடு.",
+
+                "போட்டியாளர்களின் ஆளுமை, தமிழ்ப் புலமை, தன்னம்பிக்கை, மேடைத் திறன் மற்றும் தனித்திறன் ஆகியவற்றின் அடிப்படையில் மதிப்பீடு செய்யப்படும்.",
+
+                "நடுவர்களின் தீர்ப்பே இறுதியானது."
+
+            ]
+
+        }
+
+    };
+
+
+    /* =========================================
+       OPEN EVENT
+    ========================================= */
+
+    function openEvent(eventId) {
+
+        const event = events[eventId];
+
+        if (!event) return;
+
+        document.getElementById("modalIcon").textContent =
+            event.icon;
+
+        document.getElementById("modalTitle").textContent =
+            event.title;
+
+        document.getElementById("modalCategory").textContent =
+            event.category;
+
+        const rulesContainer =
+            document.getElementById("modalRules");
+
+        rulesContainer.innerHTML = "";
+
+        event.rules.forEach(rule => {
+
+            const li = document.createElement("li");
+
+            li.textContent = rule;
+
+            rulesContainer.appendChild(li);
+
+        });
+
+        document
+            .getElementById("eventModal")
+            .classList.add("show");
+
+        document.body.style.overflow = "hidden";
+    }
+
+
+    /* =========================================
+       CLOSE MODAL
+    ========================================= */
+
+    function closeModal() {
+
+        document
+            .getElementById("eventModal")
+            .classList.remove("show");
+
+        document.body.style.overflow = "";
+    }
+
+
+    function closeModalOutside(event) {
+
+        if (
+            event.target ===
+            document.getElementById("eventModal")
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+
+
+    /* =========================================
+       ESC KEY
+    ========================================= */
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Escape") {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
 </html>

@@ -7815,3 +7815,1043 @@ body {
     }
 
 }
+/* =========================================
+   SYNAPSE '26
+   SOCIAL RESPONSIBILITY INITIATIVE
+   SAY NO TO DRUGS
+   DRUG FREE TAMILNADU
+========================================= */
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.social-responsibility-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 130px 5% 110px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(150, 0, 0, 0.14),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(25, 60, 150, 0.10),
+            transparent 32%
+        ),
+        #050505;
+
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.social-bg-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 65px 65px;
+
+    opacity: 0.45;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 18%,
+            black 82%,
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   RED GLOW
+========================================= */
+
+.social-red-glow {
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: -330px;
+    top: 25%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180,0,0,0.18),
+            transparent 68%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   BLUE GLOW
+========================================= */
+
+.social-blue-glow {
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    right: -300px;
+    top: 5%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(25,60,150,0.13),
+            transparent 68%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.social-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1250px, 100%);
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.social-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-bottom: 35px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4em;
+
+    color: #777777;
+
+    text-align: center;
+
+}
+
+
+.social-eyebrow span {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #444444;
+
+}
+
+
+/* =========================================
+   CIRCULAR LOGO
+========================================= */
+
+.social-logo {
+
+    position: relative;
+
+    width: 155px;
+
+    height: 155px;
+
+    margin: 0 auto 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid
+        rgba(255,255,255,0.25);
+
+    box-shadow:
+
+        0 0 0 8px
+        rgba(255,255,255,0.025),
+
+        0 0 0 1px
+        rgba(255,255,255,0.08),
+
+        0 0 50px
+        rgba(170,0,0,0.16);
+
+}
+
+
+.social-logo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -1px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,0.18);
+
+    pointer-events: none;
+
+}
+
+
+.social-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.social-heading {
+
+    text-align: center;
+
+}
+
+
+.social-small-title {
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.36em;
+
+    color: #555555;
+
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.social-heading h2 {
+
+    margin: 0;
+
+    font-family:
+        "Arial Black",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(
+            65px,
+            10vw,
+            150px
+        );
+
+    line-height: 0.82;
+
+    font-weight: 900;
+
+    letter-spacing: -0.075em;
+
+    color: #ffffff;
+
+}
+
+
+.social-heading h2 span {
+
+    display: block;
+
+    color: #777777;
+
+}
+
+
+/* =========================================
+   SUB HEADING
+========================================= */
+
+.social-subheading {
+
+    margin-top: 35px;
+
+    font-size:
+        clamp(
+            22px,
+            3vw,
+            40px
+        );
+
+    font-weight: 300;
+
+    letter-spacing: 0.18em;
+
+    color: #aaaaaa;
+
+}
+
+
+.social-subheading strong {
+
+    color: #ffffff;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.social-divider {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 70px 0 55px;
+
+}
+
+
+.social-divider span {
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #333333
+        );
+
+}
+
+
+.social-divider span:last-child {
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #333333
+        );
+
+}
+
+
+.social-divider div {
+
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    color: #555555;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.social-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+.social-intro {
+
+    border-left:
+        2px solid
+        rgba(255,255,255,0.35);
+
+    padding-left: 30px;
+
+}
+
+
+.social-intro p {
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            18px,
+            2vw,
+            25px
+        );
+
+    line-height: 1.65;
+
+    font-weight: 300;
+
+    color: #dddddd;
+
+}
+
+
+.social-message {
+
+    padding-top: 5px;
+
+}
+
+
+.social-message p {
+
+    margin: 0 0 22px;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    letter-spacing: 0.025em;
+
+    color: #777777;
+
+}
+
+
+.social-message p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================
+   THREE PILLARS
+========================================= */
+
+.social-pillars {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-top: 75px;
+
+    border-top:
+        1px solid #202020;
+
+    border-bottom:
+        1px solid #202020;
+
+}
+
+
+.social-pillar {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    min-height: 115px;
+
+    padding: 30px 25px;
+
+    border-right:
+        1px solid #202020;
+
+}
+
+
+.social-pillar:first-child {
+
+    padding-left: 0;
+
+}
+
+
+.social-pillar:last-child {
+
+    border-right: none;
+
+}
+
+
+.social-pillar > span {
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+
+    color: #555555;
+
+}
+
+
+.social-pillar div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.social-pillar strong {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    color: #ffffff;
+
+}
+
+
+.social-pillar small {
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.12em;
+
+    color: #666666;
+
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.social-final {
+
+    margin-top: 80px;
+
+    text-align: center;
+
+}
+
+
+.social-final-line {
+
+    width: 1px;
+
+    height: 45px;
+
+    margin: 0 auto 25px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #666666
+        );
+
+}
+
+
+.social-final span {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.35em;
+
+    color: #555555;
+
+}
+
+
+.social-final strong {
+
+    display: block;
+
+    font-size:
+        clamp(
+            25px,
+            3vw,
+            42px
+        );
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: #ffffff;
+
+}
+
+
+.social-final .social-life {
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================================
+   BOTTOM BRANDING
+========================================= */
+
+.social-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 75px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #181818;
+
+}
+
+
+.social-bottom span {
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    color: #444444;
+
+}
+
+
+.social-bottom span:first-child {
+
+    color: #777777;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .social-responsibility-section {
+
+        padding:
+            105px 6%
+            90px;
+
+    }
+
+
+    .social-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .social-intro {
+
+        max-width: 700px;
+
+    }
+
+
+    .social-pillars {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .social-pillar {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #202020;
+
+    }
+
+
+    .social-pillar:first-child {
+
+        padding-left: 25px;
+
+    }
+
+
+    .social-pillar:last-child {
+
+        border-bottom: none;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .social-responsibility-section {
+
+        padding:
+            85px 7%
+            75px;
+
+    }
+
+
+    .social-eyebrow {
+
+        margin-bottom: 28px;
+
+        gap: 9px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.22em;
+
+    }
+
+
+    .social-eyebrow span {
+
+        width: 20px;
+
+    }
+
+
+    /* LOGO */
+
+    .social-logo {
+
+        width: 115px;
+
+        height: 115px;
+
+        margin-bottom: 30px;
+
+        box-shadow:
+
+            0 0 0 6px
+            rgba(255,255,255,0.025),
+
+            0 0 35px
+            rgba(170,0,0,0.14);
+
+    }
+
+
+    .social-small-title {
+
+        margin-bottom: 16px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.25em;
+
+    }
+
+
+    .social-heading h2 {
+
+        font-size: 18vw;
+
+        line-height: 0.84;
+
+    }
+
+
+    .social-subheading {
+
+        margin-top: 25px;
+
+        font-size: 16px;
+
+        letter-spacing: 0.12em;
+
+    }
+
+
+    .social-divider {
+
+        margin:
+            50px 0 40px;
+
+        gap: 12px;
+
+    }
+
+
+    .social-content {
+
+        gap: 30px;
+
+    }
+
+
+    .social-intro {
+
+        padding-left: 20px;
+
+    }
+
+
+    .social-intro p {
+
+        font-size: 16px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .social-message p {
+
+        font-size: 10px;
+
+        line-height: 1.85;
+
+    }
+
+
+    .social-pillars {
+
+        margin-top: 50px;
+
+    }
+
+
+    .social-pillar {
+
+        padding:
+            24px 0;
+
+        gap: 15px;
+
+    }
+
+
+    .social-pillar:first-child {
+
+        padding-left: 0;
+
+    }
+
+
+    .social-pillar strong {
+
+        font-size: 9px;
+
+    }
+
+
+    .social-pillar small {
+
+        font-size: 7px;
+
+    }
+
+
+    .social-final {
+
+        margin-top: 60px;
+
+    }
+
+
+    .social-final span {
+
+        font-size: 6px;
+
+        letter-spacing: 0.25em;
+
+    }
+
+
+    .social-final strong {
+
+        font-size: 21px;
+
+        letter-spacing: 0.06em;
+
+    }
+
+
+    .social-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 55px;
+
+        text-align: center;
+
+    }
+
+
+    .social-bottom span {
+
+        font-size: 6px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .social-logo {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+
+    .social-heading h2 {
+
+        font-size: 17vw;
+
+    }
+
+
+    .social-subheading {
+
+        font-size: 14px;
+
+    }
+
+
+    .social-intro p {
+
+        font-size: 14px;
+
+    }
+
+}

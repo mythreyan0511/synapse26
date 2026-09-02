@@ -2919,13 +2919,12 @@ span:nth-child(3) {
 
     }
 
-
     .events-grid {
-
         grid-template-columns:
-            1fr;
-
+            repeat(2, minmax(0, 1fr));
     }
+
+}
 
 
     .event-card {
