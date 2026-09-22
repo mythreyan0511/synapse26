@@ -5,6 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Culturals | SYNAPSE '26</title>
 <link rel="stylesheet" href="culturals.css">
+<style>
+.details-contacts {
+    display: block !important;
+    margin-top: 30px;
+}
+
+.contacts-grid {
+    display: grid !important;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-card {
+    display: block !important;
+    padding: 18px;
+}
+
+
+.contact-actions {
+    display: flex !important;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-actions a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-call,
+.contact-whatsapp {
+    border: 1px solid currentColor;
+}
+</style>
 </head>
 <body>
 
@@ -14,8 +54,8 @@
         <nav class="main-nav">
             <a href="index.html">HOME</a>
             <a href="index.html#sponsors">SPONSORS</a>
-			<a href="sports.htm">SPORTS</a>
-			<a href="culturals.htm">CULTURALS</a>
+			<a href="sports.html">SPORTS</a>
+			<a href="culturals.html">CULTURALS</a>
             <a href="index.html#gallery">FORMER YEAR HIGHLIGHTS</a>
             <a href="index.html#connect">CONTACT US</a>
         </nav>
@@ -52,7 +92,7 @@
     <div class="category-grid">
 
         <article class="category-card" onclick="showCategory('stage')">
-            <div class="category-image"><img src="YOUR_ORIGINAL_STAGE_IMAGE_URL" alt="Stage Events"></div>
+            <div class="category-image"><img src="https://i.ibb.co/Z6ysBdjY/Whats-App-Image-2026-09-04-at-18-17-48.jpg" alt="Stage Events"></div>
             <div class="category-overlay"></div>
             <div class="category-number">01</div>
             <div class="category-content">
@@ -221,7 +261,7 @@ const culturalEvents = {
             image: "https://i.ibb.co/C3xd0Lmc/Whats-App-Image-2026-08-30-at-17-01-54.jpg",
             fee: "₹100 / Head",
             rules: [
-                "Maximum 2 teams per college.",
+                "No restrictions in number of entries per college.",
                 "5–10 participants per team.",
                 "No cross-college teams allowed.",
                 "Time limit: 10 minutes.",
@@ -231,8 +271,18 @@ const culturalEvents = {
                 "Judging criteria: content, presentation, humour, spontaneity, adhering to topic and creativity.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Shruthi",
+                    phone: "8089123802"
+                },
+                {
+                    name: "Nethra",
+                    phone: "8807615073"
+                }
+            ]
         },
+
         {
             title: "Dumb C",
             image: "https://i.ibb.co/d0G3PVfj/Dumb-c.png",
@@ -248,8 +298,18 @@ const culturalEvents = {
                 "Final round duration: 4 minutes.",
                 "Top 3 will get the prize."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Hansika",
+                    phone: "6363004535"
+                },
+                {
+                    name: "Sree Dharshini",
+                    phone: "7904824868"
+                }
+            ]
         },
+
         {
             title: "Connexions",
             image: "https://i.ibb.co/PZ2TVz1D/Connections.png",
@@ -264,14 +324,24 @@ const culturalEvents = {
                 "A series of panels containing clues will be shown.",
                 "The team finding the answer first will be given the marks."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Rajeswari",
+        phone: "6369607824"
+    },
+    {
+        name: "Nakshatra",
+        phone: "6382922177"
+    }
+]
         },
+
         {
             title: "Movie Spoof",
             image: "https://i.ibb.co/zh3PRdXx/Movie-spoof.png",
             fee: "₹100 / Head",
             rules: [
-                "One team per college.",
+                "No restriction on number of entries per college",
                 "Time limit: 8–10 minutes. Buzzer at 8 minutes and at 10 minutes.",
                 "5–10 participants per team.",
                 "Maximum registration: 12 teams, with priority based on registration order.",
@@ -283,20 +353,29 @@ const culturalEvents = {
                 "Vulgarity/plagiarism will not be entertained.",
                 "Participants must report on time; otherwise they will be disqualified."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Poovitha",
+                    phone: "7305959044"
+                },
+                {
+                    name: "Nithya",
+                    phone: "6385122827"
+                }
+            ]
         }
     ],
 
     music: [
         {
             title: "Solo Singing",
-            image: "https://i.ibb.co/tPNKWZCM/Solo-singing-men.jpg",
+            image: "https://i.ibb.co/qMYWd639/Whats-App-Image-2026-09-06-at-17-00-01.jpg",
             fee: "₹200 / Head",
             rules: [
                 "Multiple entries per college are allowed.",
                 "Songs of any genre/language are permitted.",
                 "Participants may use karaoke or bring their own instruments.",
-                "Karaoke must be submitted 2 days prior in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
+                "Karaoke must be submitted 1 week prior in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
                 "Singing on seeing lyrics is not allowed.",
                 "Time limit: 3 minutes.",
                 "Medleys and mashups are allowed.",
@@ -304,8 +383,18 @@ const culturalEvents = {
                 "Judging criteria: vocal quality, rhythm, pitch, song choice and audience response.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Vansh Kaushal",
+                    phone: "9363152488"
+                },
+                {
+                    name: "Nethra",
+                    phone: "9080649497"
+                }
+            ]
         },
+
         {
             title: "Duet Singing",
             image: "https://i.ibb.co/2R7Q28b/duet-singing.png",
@@ -324,20 +413,40 @@ const culturalEvents = {
                 "Judging criteria: vocal quality, dynamics, time sense, stage presence and audience response.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Leenadharani",
+        phone: "9080285920"
+    },
+    {
+        name: "Saranya",
+        phone: "8148923617"
+    }
+]
         },
+
         {
             title: "Solo Instrumental",
             image: "https://i.ibb.co/7JqHXBvB/Solo-instrument.jpg",
             fee: "₹200 / Head",
             rules: [
-                "Entries: 3 per college.",
+                "No restrictions in number of entries per college",
                 "Time limit: 4 minutes.",
                 "Participants must inform their instrument of choice during online registration.",
                 "No instrument or additional sound equipment will be provided."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Ramya",
+        phone: "9840430154"
+    },
+    {
+        name: "Vega",
+        phone: "9360389961"
+    }
+]
         },
+
         {
             title: "Battle of Bands",
             image: "https://i.ibb.co/3m4X7TSK/Battle-of-bands.jpg",
@@ -346,9 +455,21 @@ const culturalEvents = {
                 "Participants must be from the same college.",
                 "Maximum 12 members for the team.",
                 "Time limit maximum up to 15 minutes.",
+                "Judging criteria- rhythm and synchronisation , musicality , stage presence and energy , audience response",
+                "No reference to lyrics are allowed",
+                "Mashups and Own creation are allowed",
                 "No instruments provided from our side."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Bharath",
+                    phone: "6385267797"
+                },
+                {
+                    name: "Danya",
+                    phone: "8428387550"
+                }
+            ]
         }
     ],
 
@@ -358,19 +479,29 @@ const culturalEvents = {
             image: "https://i.ibb.co/W4CbRGCC/Fashion-parade.jpg",
             fee: "₹200 / Head",
             rules: [
-                "Team event with a minimum of 8 members to a maximum of 25 members, including narrator and helper, if any.",
+                "Team event with a minimum of 8 members to a maximum of 20 members, including narrator and helper, if any.",
                 "More than one team from a college is allowed to compete.",
                 "Theme: Open theme.",
                 "Maximum time limit: 15 minutes, with no gap during the performance, including introduction and theme explanation.",
                 "Participants should carry audio tracks in MP3 format in a pen drive and WhatsApp the same beforehand to the respective in-charges.",
                 "Stage sets are not allowed.",
-                "Background video or picture can be depicted on the LED screen but must be submitted a day before the event.",
+                "Background video or picture can be depicted on the LED screen but must be submitted a week before the event.",
                 "Vulgarity is strictly prohibited. Any form of obscenity will lead to disqualification.",
                 "Judging will be based on theme, creativity, apparel, stage presence and overall impact.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Varshini",
+                    phone: "+917397141925"
+                },
+                {
+                    name: "Mokesh",
+                    phone: "+919345259941"
+                }
+            ]
         },
+
         {
             title: "Solo Dance",
             image: "https://i.ibb.co/ycvf5yYd/Solo-dance.jpg",
@@ -379,15 +510,25 @@ const culturalEvents = {
                 "Every participant must be a college/university student.",
                 "There is no specific theme for the competition.",
                 "Marks will be awarded based on creativity, music, stage presence, dance variation, synchronisation, entertainment value and skills.",
-                "Participants must bring their music in a pen drive.",
+                "Participants must bring their music in a pen drive and to be sent to the incharges a week before the event.",
                 "Participants must report latest at the competition desk 45 minutes before the start of the competition.",
                 "Each participant will have a maximum of 4–5 minutes to demonstrate their style and expertise.",
                 "Timing will begin with the first choreographed movement or note of music.",
                 "Timing will end with the last choreographed movement or note of music, whichever comes last.",
                 "Final decision regarding any matter lies in the hands of the organisers and judges and is binding."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Ashher Raihan",
+        phone: "9600572825"
+    },
+    {
+        name: "Mushraf",
+        phone: "9497186321"
+    }
+]
         },
+
         {
             title: "Duet Dance",
             image: "https://i.ibb.co/5Wxn2Ss8/Duet-dancing.jpg",
@@ -395,7 +536,7 @@ const culturalEvents = {
             rules: [
                 "Time limit: 3–4 minutes; do not exceed the time limit.",
                 "Songs: Any language and genre.",
-                "Audio must be submitted beforehand in WhatsApp to the in-charge and also brought in a pen drive on the day of the event.",
+                "Audio must be submitted beforehand in WhatsApp to the in-charge a week before the event and also brought in a pen drive on the day of the event.",
                 "Participants should be from the same college.",
                 "No gender specifications.",
                 "Any number of teams from one college are welcome.",
@@ -405,8 +546,18 @@ const culturalEvents = {
                 "Judging criteria: dance form, compatibility, coordination, expression, stage and prop usage, costume and audience quotient.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Ilango",
+                    phone: "+918220615064"
+                },
+                {
+                    name: "Ajay",
+                    phone: "+919943287460"
+                }
+            ]
         },
+
         {
             title: "Adaptunes",
             image: "https://i.ibb.co/HLgntPk6/Adaptunes.jpg",
@@ -414,17 +565,28 @@ const culturalEvents = {
             rules: [
                 "It is an individual competition.",
                 "Duration: 2–2.5 minutes.",
-                "Multiple entries per college are allowed, maximum 5.",
+                "Multiple entries per college are allowed.",
                 "Songs or music will be played continuously at random from any language.",
                 "Participants should dance according to the music played.",
                 "Wherever required, props should be used.",
                 "Judging will be based on adaptation, dance moves, continuity, expression, audience response, etc.",
                 "Time will be announced 1 day prior to the event.",
                 "Participants are requested to assemble near the stage 1 hour prior to the event.",
+                "properties will be provided",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Harini",
+        phone: "6383772642"
+    },
+    {
+        name: "Keerthana AK",
+        phone: "9789796227"
+    }
+]
         },
+
         {
             title: "Replica",
             image: "https://i.ibb.co/ycxqw3CW/Replica.jpg",
@@ -439,13 +601,23 @@ const culturalEvents = {
                 "Props/accessories are allowed. Sharp and dangerous props are strictly prohibited.",
                 "Any article that can make the stage messy is prohibited.",
                 "Props are not provided from our side.",
-                "Properly edited video (MP4 track) must be sent to the respective in-charges.",
+                "Properly edited video (MP4 track) must be sent to the respective in-charges a week before the event.",
                 "Any form of vulgarity or obscenity in song selection or costume will lead to disqualification.",
                 "Replication of YouTube videos by online choreographers is not allowed.",
                 "Judging criteria: synchronisation with the video, coordination, costume and presentation, overall perfection and maintenance of time limit."
             ],
-            contacts: []
+            contacts: [
+    {
+        name: "Aaseefa",
+        phone: "8056234012"
+    },
+    {
+        name: "Dharanisri",
+        phone: "8807856878"
+    }
+]
         },
+
         {
             title: "Choreonite",
             image: "https://i.ibb.co/DPMxkwq6/Choreonite.jpg",
@@ -455,181 +627,229 @@ const culturalEvents = {
                 "Time limit: 5–10 minutes. Exceeding the time limit will lead to point deduction.",
                 "Maximum 16 teams can register, with priority based on order of registration.",
                 "Songs of any language and genre are accepted.",
-                "Track should be submitted in MP3 format in a pen drive 1 day prior to the event.",
+                "Track should be submitted in MP3 format in whatsapp a week prior to the event.",
                 "Freestyle props can be used and collected by the participants.",
                 "Anything that makes the stage messy and slippery, including water, oily/soapy liquids, matchsticks, glitter and confetti, is strictly prohibited.",
                 "Judging criteria: choreography, coordination and perfection, facial expression and body language, props usage and costumes.",
                 "Judge's decision will be final."
             ],
-            contacts: []
+            contacts: [
+                {
+                    name: "Dilli Babu",
+                    phone: "+919003938411"
+                },
+                {
+                    name: "Rakshith",
+                    phone: "+917373504129"
+                }
+            ]
         }
     ],
 
     online: [
-        {
-            title: "Memes",
-            image: "https://i.ibb.co/C5Q0Sc2N/memes.png",
-            fee: "FREE",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Either photo meme or video meme can be submitted.",
-                "Originality is important.",
-                "Memes should be sent through WhatsApp or mail ID.",
-                "Memes should be sent in document form for better clarity.",
-                "Name, college name, year of study and Instagram ID must be sent along with the meme.",
-                "Winners will be selected based on the number of likes.",
-                "Use of bot likes will lead to disqualification.",
-                "Meme contest admin's decision will be final."
-            ],
-            contacts: []
-        },
-        {
-            title: "Reels",
-            image: "https://i.ibb.co/nNwRddGF/Whats-App-Image-2026-09-02-at-19-50-02.jpg",
-            fee: "₹50 / Head",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Duration of up to 60 seconds is allowed.",
-                "Name, college name, year of study and Instagram ID must be sent along with the reel.",
-                "Originality is important.",
-                "Reels video dimension is based on participant's wish.",
-                "Reels should be sent to the in-charge's mail ID.",
-                "Reels should be sent in document form for better clarity.",
-                "Use of property is allowed.",
-                "Use of bot likes will lead to disqualification.",
-                "Reel contest admin's decision is final."
-            ],
-            contacts: []
-        },
-        {
-            title: "Painting",
-            image: "https://i.ibb.co/ccBCpR1F/paintings.png",
-            fee: "₹50 / Head",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Painting should be portrait and should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Sign your artwork with your name.",
-                "Plagiarism will lead to disqualification.",
-                "Name, college name, year of study and Instagram ID must be sent along with the entry.",
-                "Winner and runner will be selected based on number of likes.",
-                "Use of bot likes will lead to disqualification.",
-                "Painting contest admin's decision will be final."
-            ],
-            contacts: []
-        },
-        {
-            title: "Mandala",
-            image: "https://i.ibb.co/vvH9Pbfs/mandala.png",
-            fee: "₹50 / Head",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Artwork can be done using any physical media.",
-                "Artwork should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Winner and runner will be selected based on number of likes.",
-                "Name, college name, year of study and Instagram ID must be sent along with the artwork.",
-                "Admin's decision will be final."
-            ],
-            contacts: []
-        },
-        {
-            title: "Photography",
-            image: "https://i.ibb.co/tMYdk5rG/photography.png",
-            fee: "₹50 / Person",
-            rules: [
-                "Photo should be original.",
-                "One photo per person.",
-                "Should submit before the due date.",
-                "No editing allowed.",
-                "Winners will be announced based on judge's decision.",
-                "Special prize will be based on likes.",
-                "Name, college name, year of study and Instagram ID must be sent along with the photo."
-            ],
-            contacts: []
-        },
-        {
-            title: "Poetry - English",
-            image: "https://i.ibb.co/20hGHw9r/poetry-english.png",
-            fee: "₹50 / Person",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Plagiarism will lead to disqualification.",
-                "Winners and runners will be based on judge's decision.",
-                "Special prize will be based on number of likes.",
-                "Judge's decision will be final.",
-                "Name, college name, year of study and Instagram ID must be sent along with the poem."
-            ],
-            contacts: []
-        },
-        {
-            title: "Poetry - Tamil",
-            image: "https://i.ibb.co/PvF3DRtj/poetry-tamil.png",
-            fee: "₹50 / Person",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Plagiarism will lead to disqualification.",
-                "Winners and runners will be based on judge's decision.",
-                "Special prize will be based on number of likes.",
-                "Judge's decision will be final.",
-                "Name, college name, year of study and Instagram ID must be sent along with the poem."
-            ],
-            contacts: []
-        },
-        {
-            title: "Movie Frame Recreation",
-            image: "https://i.ibb.co/1YBXNGRf/movie-frame-recreation.png",
-            fee: "₹50 / Person",
-            rules: [
-                "Theme can be of any content.",
-                "One entry per person.",
-                "Multiple entries are allowed from one college.",
-                "Posters from any movie can be used as reference.",
-                "Any kind of costumes and accessories can be used. Minor editing and colour grading are allowed.",
-                "Entries should be sent in document through WhatsApp or mail ID to the in-charges.",
-                "References should also be included in the document.",
-                "Entries should be sent along with name, college name, year of study, Instagram ID and contact number.",
-                "Use of bot likes will lead to disqualification.",
-                "No offensive contents are allowed.",
-                "Winners will be selected on the basis of number of likes and judge decision."
-            ],
-            contacts: []
-        },
-        {
-            title: "Short Story - English",
-            image: "https://i.ibb.co/bjKRYjz6/story-writing-english.png",
-            fee: "₹50 / Person",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Plagiarism will lead to disqualification.",
-                "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Winners will be based on judge's decision.",
-                "Name, college name, year of study and Instagram ID must be sent along with the work."
-            ],
-            contacts: []
-        },
-        {
-            title: "Short Story - Tamil",
-            image: "https://i.ibb.co/JW5yvcMJ/story-writing-tamil.png",
-            fee: "₹50 / Person",
-            rules: [
-                "One entry per participant is allowed.",
-                "There is no restriction in number of entries from each college.",
-                "Plagiarism will lead to disqualification.",
-                "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
-                "Winners will be based on judge's decision.",
-                "Name, college name, year of study and Instagram ID must be sent along with the work."
-            ],
-            contacts: []
-        }
-    ]
+    {
+        title: "Memes",
+        image: "https://i.ibb.co/C5Q0Sc2N/memes.png",
+        fee: "FREE",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Either photo meme or video meme can be submitted.",
+            "Originality is important.",
+            "Memes should be sent through WhatsApp or mail ID.",
+            "Memes should be sent in document form for better clarity.",
+            "Name, college name, year of study and Instagram ID must be sent along with the meme.",
+            "Winners will be selected based on the number of likes.",
+            "Use of bot likes will lead to disqualification.",
+            "Meme contest admin's decision will be final."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Reels",
+        image: "https://i.ibb.co/nNwRddGF/Whats-App-Image-2026-09-02-at-19-50-02.jpg",
+        fee: "₹50 / Head",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Duration of up to 60 seconds is allowed.",
+            "Name, college name, year of study and Instagram ID must be sent along with the reel.",
+            "Originality is important.",
+            "Reels video dimension is based on participant's wish.",
+            "Reels should be sent to the in-charge's mail ID.",
+            "Reels should be sent in document form for better clarity.",
+            "Use of property is allowed.",
+            "Use of bot likes will lead to disqualification.",
+            "Reel contest admin's decision is final."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Painting",
+        image: "https://i.ibb.co/ccBCpR1F/paintings.png",
+        fee: "₹50 / Head",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Painting should be portrait and should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Sign your artwork with your name.",
+            "Plagiarism will lead to disqualification.",
+            "Name, college name, year of study and Instagram ID must be sent along with the entry.",
+            "Winner and runner will be selected based on number of likes.",
+            "Use of bot likes will lead to disqualification.",
+            "Painting contest admin's decision will be final."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Mandala",
+        image: "https://i.ibb.co/vvH9Pbfs/mandala.png",
+        fee: "₹50 / Head",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Artwork can be done using any physical media.",
+            "Artwork should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Winner and runner will be selected based on number of likes.",
+            "Name, college name, year of study and Instagram ID must be sent along with the artwork.",
+            "Admin's decision will be final."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Photography",
+        image: "https://i.ibb.co/tMYdk5rG/photography.png",
+        fee: "₹50 / Person",
+        rules: [
+            "Photo should be original.",
+            "One photo per person.",
+            "Should submit before the due date.",
+            "No editing allowed.",
+            "Winners will be announced based on judge's decision.",
+            "Special prize will be based on likes.",
+            "Name, college name, year of study and Instagram ID must be sent along with the photo."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Poetry - English",
+        image: "https://i.ibb.co/20hGHw9r/poetry-english.png",
+        fee: "₹50 / Person",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Plagiarism will lead to disqualification.",
+            "Winners and runners will be based on judge's decision.",
+            "Special prize will be based on number of likes.",
+            "Judge's decision will be final.",
+            "Name, college name, year of study and Instagram ID must be sent along with the poem."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Poetry - Tamil",
+        image: "https://i.ibb.co/PvF3DRtj/poetry-tamil.png",
+        fee: "₹50 / Person",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Poems should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Plagiarism will lead to disqualification.",
+            "Winners and runners will be based on judge's decision.",
+            "Special prize will be based on number of likes.",
+            "Judge's decision will be final.",
+            "Name, college name, year of study and Instagram ID must be sent along with the poem."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Movie Frame Recreation",
+        image: "https://i.ibb.co/1YBXNGRf/movie-frame-recreation.png",
+        fee: "₹50 / Person",
+        rules: [
+            "Theme can be of any content.",
+            "One entry per person.",
+            "Multiple entries are allowed from one college.",
+            "Posters from any movie can be used as reference.",
+            "Any kind of costumes and accessories can be used. Minor editing and colour grading are allowed.",
+            "Entries should be sent in document through WhatsApp or mail ID to the in-charges.",
+            "References should also be included in the document.",
+            "Entries should be sent along with name, college name, year of study, Instagram ID and contact number.",
+            "Use of bot likes will lead to disqualification.",
+            "No offensive contents are allowed.",
+            "Winners will be selected on the basis of number of likes and judge decision."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Short Story - English",
+        image: "https://i.ibb.co/bjKRYjz6/story-writing-english.png",
+        fee: "₹50 / Person",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Plagiarism will lead to disqualification.",
+            "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Winners will be based on judge's decision.",
+            "Name, college name, year of study and Instagram ID must be sent along with the work."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    },
+
+    {
+        title: "Short Story - Tamil",
+        image: "https://i.ibb.co/JW5yvcMJ/story-writing-tamil.png",
+        fee: "₹50 / Person",
+        rules: [
+            "One entry per participant is allowed.",
+            "There is no restriction in number of entries from each college.",
+            "Plagiarism will lead to disqualification.",
+            "Short story should be sent in picture (JPEG) format in WhatsApp or mail ID.",
+            "Winners will be based on judge's decision.",
+            "Name, college name, year of study and Instagram ID must be sent along with the work."
+        ],
+        contacts: [
+            { name: "Dhakshatha", phone: "6380213113" },
+            { name: "Rishi Krishna", phone: "6379098683" }
+        ]
+    }
+]
 };
 
 const categoryGrid = document.querySelector(".category-grid");
@@ -715,17 +935,33 @@ function showDetails(category, index) {
         fee.style.display = "none";
     }
 
-    const contacts = document.getElementById("detailsContacts");
+const contacts = document.getElementById("detailsContacts");
     contacts.innerHTML = "";
 
     if (event.contacts && event.contacts.length) {
         event.contacts.forEach(contact => {
             const card = document.createElement("div");
             card.className = "contact-card";
+
+            const whatsappNumber = contact.phone.replace(/\D/g, "");
+
             card.innerHTML = `
                 <strong>${contact.name}</strong>
-                <span>${contact.phone}</span>
+
+                <div class="contact-actions">
+                    <a href="tel:${contact.phone}" class="contact-call">
+                        📞 CALL
+                    </a>
+
+                    <a href="https://wa.me/${whatsappNumber}"
+                       class="contact-whatsapp"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        💬 WHATSAPP
+                    </a>
+                </div>
             `;
+
             contacts.appendChild(card);
         });
     }

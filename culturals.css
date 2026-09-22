@@ -2369,3 +2369,37 @@ button {
         aspect-ratio: 4 / 5;
     }
 }
+.contact-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: 0.2s ease;
+}
+
+.contact-call {
+    border: 1px solid currentColor;
+    color: inherit;
+}
+
+.contact-whatsapp {
+    border: 1px solid currentColor;
+    color: inherit;
+}
+
+.contact-actions a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
