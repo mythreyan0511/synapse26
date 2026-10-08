@@ -14,6 +14,181 @@
         href="style.css"
     >
 
+
+    <style>
+        /* =========================================
+           HERO SPONSORS — POWERED BY / CO-POWERED BY
+           Responsive override for index.html
+        ========================================== */
+        .hero {
+            flex-direction: column;
+        }
+
+        .hero-sponsors {
+            position: relative;
+            z-index: 10;
+            width: min(900px, 90%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 28px;
+            text-align: center;
+            pointer-events: auto;
+        }
+
+        .hero-sponsor-tier {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-sponsor-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.30em;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .powered-logo {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .powered-logo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 55px;
+            object-fit: contain;
+        }
+
+        .co-powered-by {
+            margin-top: 16px;
+        }
+
+        .co-powered-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px 28px;
+        }
+
+        .co-powered-logos .hero-sponsor-logo {
+            width: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .co-powered-logos img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 42px;
+            object-fit: contain;
+        }
+
+        .hero-sponsor-logo {
+            text-decoration: none;
+            transition: transform .3s ease, opacity .3s ease, filter .3s ease;
+        }
+
+        .hero-sponsor-logo:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.15) drop-shadow(0 0 10px rgba(255,255,255,.18));
+        }
+
+        .hero-sponsor-logo:focus-visible {
+            outline: 1px solid rgba(255,255,255,.7);
+            outline-offset: 5px;
+        }
+
+        @media (max-width: 900px) {
+            .hero-sponsors {
+                width: min(92%, 600px);
+                margin-top: 22px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 100svh;
+                padding-top: 80px;
+                padding-bottom: 35px;
+            }
+
+            .hero-sponsors {
+                width: 92%;
+                margin-top: 20px;
+            }
+
+            .hero-sponsor-label {
+                font-size: 7px;
+                letter-spacing: .24em;
+                margin-bottom: 7px;
+            }
+
+            .powered-logo {
+                width: clamp(120px, 35vw, 150px);
+            }
+
+            .powered-logo img {
+                max-height: 48px;
+            }
+
+            .co-powered-by {
+                margin-top: 13px;
+            }
+
+            .co-powered-logos {
+                gap: 12px 18px;
+                max-width: 320px;
+            }
+
+            .co-powered-logos .hero-sponsor-logo {
+                width: clamp(72px, 23vw, 90px);
+            }
+
+            .co-powered-logos img {
+                max-height: 36px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero {
+                padding-top: 75px;
+                padding-bottom: 25px;
+            }
+
+            .hero-sponsors {
+                margin-top: 16px;
+            }
+
+            .powered-logo {
+                width: 112px;
+            }
+
+            .co-powered-logos {
+                gap: 10px 14px;
+            }
+
+            .co-powered-logos .hero-sponsor-logo {
+                width: 68px;
+            }
+
+            .co-powered-logos img {
+                max-height: 32px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -270,7 +445,38 @@
                         </small>
 
                     </div>
+<!-- =========================================
+                     HERO SPONSORS
+                     POWERED BY / CO-POWERED BY
+                ========================================== -->
 
+                <div class="hero-sponsors">
+
+                    <!-- POWERED BY -->
+                    <div class="hero-sponsor-tier powered-by">
+
+                        <span class="hero-sponsor-label">
+                            POWERED BY
+                        </span>
+
+                        <a
+                            href="https://www.naruvihospitals.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="hero-sponsor-logo powered-logo"
+                            aria-label="Powered by Sponsor"
+                        >
+                            <img
+                                src="https://i.ibb.co/fY7XL6Z0/naruvi.jpg"
+                                alt="Powered by Sponsor"
+                            >
+                        </a>
+
+                    </div>
+
+                    
+
+                </div>
 
                     <div class="hero-buttons">
 
@@ -279,7 +485,7 @@
                             class="button button-primary"
                         >
 
-                            REGISTRATION OPENS SOON
+                            REGISTER NOW
 
                             <span>→</span>
 
@@ -287,11 +493,11 @@
 
 
                         <a
-                            href="#"
+                            href="https://drive.google.com/drive/folders/1kK70PpN_rqftj1Ka9d5s0kqoQsbeb4AO?usp=drive_link"
                             class="button button-secondary"
                         >
 
-                            BROCHURE COMING SOON
+                            DOWNLOAD BROCHURE
 
                             <span>↓</span>
 
@@ -300,6 +506,8 @@
                     </div>
 
                 </div>
+
+                
 
 
                 <!-- Left Side -->

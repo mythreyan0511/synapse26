@@ -3883,3 +3883,297 @@ body.menu-open {
         min-width: 72px;
     }
 }
+
+
+/* =========================================================
+   SYNAPSE '26 — FINAL MOBILE EVENT DETAILS OVERLAP FIX
+   Keeps event image, information and mobile/contact numbers
+   in separate normal-flow sections.
+========================================================= */
+
+/* Desktop/tablet: explicitly define the three sections */
+.details-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+        "image information"
+        "contacts contacts";
+    align-items: start;
+    gap: 60px;
+}
+
+/* Put each details section into its own grid area */
+.details-layout .details-image {
+    grid-area: image;
+    position: sticky;
+    top: 110px;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.details-layout .details-information {
+    grid-area: information;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    z-index: 2;
+}
+
+.details-layout .details-contacts {
+    grid-area: contacts;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0;
+    padding-top: 35px;
+    clear: both;
+    z-index: 3;
+}
+
+/* Never allow contact content to visually sit on top of the image */
+.details-layout .details-contacts,
+.details-layout .contacts-grid,
+.details-layout .contact-card {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .details-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "image"
+            "information"
+            "contacts";
+        gap: 35px;
+    }
+
+    .details-layout .details-image {
+        position: relative;
+        top: auto;
+    }
+
+    .details-layout .details-contacts {
+        margin-top: 0;
+    }
+}
+
+/* =========================================================
+   MOBILE — IMPORTANT OVERLAP PREVENTION
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .details-layout {
+        display: grid;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "image"
+            "information"
+            "contacts";
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* Event image occupies its own row and normal document space */
+    .details-layout .details-image {
+        grid-area: image;
+        position: relative !important;
+        top: auto !important;
+        left: auto;
+        right: auto;
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .details-layout .details-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Event information gets its own row */
+    .details-layout .details-information {
+        grid-area: information;
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+    }
+
+    /* Contact/mobile-number section is ALWAYS below image + information */
+    .details-layout .details-contacts {
+        grid-area: contacts;
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        margin: 0;
+        padding-top: 25px;
+        clear: both;
+        z-index: 3;
+        background: transparent;
+    }
+
+    .details-layout .contacts-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        height: auto;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .details-layout .contact-card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        overflow: visible;
+    }
+
+    .details-layout .contact-card > div:first-child {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .details-layout .contact-card h4 {
+        margin-top: 8px;
+        line-height: 1.25;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .details-layout .contact-buttons {
+        position: relative;
+        flex: 0 0 auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        z-index: 4;
+    }
+
+    .details-layout .contact-buttons a {
+        position: relative;
+        flex: 0 0 auto;
+        min-width: 68px;
+        padding: 9px 10px;
+        white-space: nowrap;
+        text-align: center;
+        z-index: 5;
+    }
+
+    /* Registration/action area cannot push into another grid section */
+    .details-layout .details-actions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .details-layout .registration-fee {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        z-index: 2;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .details-layout {
+        gap: 26px;
+    }
+
+    .details-layout .details-contacts {
+        padding-top: 22px;
+    }
+
+    .details-layout .contact-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .details-layout .contact-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 7px;
+    }
+
+    .details-layout .contact-buttons a {
+        flex: 1 1 0;
+        width: 100%;
+        min-width: 0;
+        padding: 10px 8px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .details-layout {
+        gap: 24px;
+    }
+
+    .details-layout .details-contacts {
+        padding-top: 20px;
+    }
+
+    .details-layout .contact-card {
+        padding: 14px;
+    }
+
+    .details-layout .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .details-layout .contact-buttons a {
+        width: 100%;
+        flex: none;
+    }
+}

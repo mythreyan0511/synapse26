@@ -8853,5 +8853,303 @@ body {
         font-size: 14px;
 
     }
+/* =========================================================
+   SYNAPSE '26 — HERO SPONSORS
+   POWERED BY / CO-POWERED BY
+========================================================= */
+
+.hero-sponsors {
+    position: relative;
+    z-index: 10;
+
+    width: min(100%, 900px);
+
+    margin: clamp(28px, 3vw, 42px) auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: clamp(16px, 2vw, 26px);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   SPONSOR TIER
+========================================================= */
+
+.hero-sponsor-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.hero-sponsor-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(8px, 0.65vw, 11px);
+    font-weight: 700;
+
+    letter-spacing: 0.32em;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LOGO CONTAINER
+========================================================= */
+
+.hero-sponsor-logo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+/* =========================================================
+   POWERED BY LOGO
+========================================================= */
+
+.powered-logo {
+    width: clamp(130px, 13vw, 210px);
+    min-height: 45px;
+}
+
+.powered-logo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 70px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CO-POWERED BY LOGOS
+========================================================= */
+
+.co-powered-logos {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: clamp(18px, 2.5vw, 40px);
+
+    width: 100%;
+}
+
+
+.co-powered-logos .hero-sponsor-logo {
+    width: clamp(80px, 8vw, 125px);
+
+    min-height: 35px;
+}
+
+
+.co-powered-logos img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 48px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.hero-sponsor-logo:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    opacity: 1;
+
+    filter:
+        brightness(1.12)
+        drop-shadow(0 0 12px rgba(255, 255, 255, 0.18));
+}
+
+
+.hero-sponsor-logo:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   KEYBOARD ACCESSIBILITY
+========================================================= */
+
+.hero-sponsor-logo:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+    outline-offset: 6px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-sponsors {
+        width: min(92%, 600px);
+
+        margin-top: 24px;
+
+        gap: 18px;
+    }
+
+    .powered-logo {
+        width: 155px;
+    }
+
+    .co-powered-logos {
+        gap: 20px;
+    }
+
+    .co-powered-logos .hero-sponsor-logo {
+        width: 100px;
+    }
 
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-sponsors {
+        width: 92%;
+
+        margin-top: 22px;
+
+        gap: 17px;
+    }
+
+
+    .hero-sponsor-label {
+        margin-bottom: 7px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.25em;
+    }
+
+
+    /* POWERED BY */
+
+    .powered-logo {
+        width: clamp(120px, 35vw, 155px);
+
+        min-height: 38px;
+    }
+
+    .powered-logo img {
+        max-height: 52px;
+    }
+
+
+    /* CO-POWERED BY */
+
+    .co-powered-logos {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 14px 20px;
+    }
+
+
+    .co-powered-logos .hero-sponsor-logo {
+        width: clamp(72px, 23vw, 100px);
+
+        min-height: 30px;
+    }
+
+
+    .co-powered-logos img {
+        max-height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-sponsors {
+        margin-top: 17px;
+
+        gap: 14px;
+    }
+
+
+    .hero-sponsor-label {
+        font-size: 7px;
+    }
+
+
+    .powered-logo {
+        width: 115px;
+    }
+
+
+    .co-powered-logos {
+        gap: 11px 14px;
+    }
+
+
+    .co-powered-logos .hero-sponsor-logo {
+        width: 70px;
+    }
+
+
+    .co-powered-logos img {
+        max-height: 34px;
+    }
+
+}
+
