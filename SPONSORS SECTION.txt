@@ -231,3 +231,55 @@
 
             </section>
 			
+			
+			<!-- CO-POWERED BY -->
+                    <div class="hero-sponsor-tier co-powered-by">
+
+                        <span class="hero-sponsor-label">
+                            CO-POWERED BY
+                        </span>
+
+                        <div class="co-powered-logos">
+
+                            <a
+                                href="YOUR-CO-POWERED-LINK-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="hero-sponsor-logo"
+                                aria-label="Co-Powered by Sponsor 1"
+                            >
+                                <img
+                                    src="YOUR-CO-POWERED-LOGO-1"
+                                    alt="Co-Powered by Sponsor 1"
+                                >
+                            </a>
+
+                            <a
+                                href="YOUR-CO-POWERED-LINK-2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="hero-sponsor-logo"
+                                aria-label="Co-Powered by Sponsor 2"
+                            >
+                                <img
+                                    src="YOUR-CO-POWERED-LOGO-2"
+                                    alt="Co-Powered by Sponsor 2"
+                                >
+                            </a>
+
+                            <a
+                                href="YOUR-CO-POWERED-LINK-3"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="hero-sponsor-logo"
+                                aria-label="Co-Powered by Sponsor 3"
+                            >
+                                <img
+                                    src="YOUR-CO-POWERED-LOGO-3"
+                                    alt="Co-Powered by Sponsor 3"
+                                >
+                            </a>
+
+                        </div>
+
+                    </div>
